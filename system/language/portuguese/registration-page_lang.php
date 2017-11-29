@@ -1,0 +1,6 @@
+<?php
+
+//	Registration Page
+//	Portuguese
+
+
