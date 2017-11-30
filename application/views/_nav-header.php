@@ -23,7 +23,10 @@
                     <a href="#home-section" class="nav-link p-0">Home <span class="sr-only">(current)</span></a>
                   </li>                  
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#selected-recipes" class="nav-link p-0">Selected Recipes</a>
+                    <a href="#selected-recipes" class="nav-link p-0">Highlights</a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#category-section" class="nav-link p-0">Categories</a>
                   </li>                  
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
                     <a href="#contact-section" class="nav-link p-0">Contact</a>

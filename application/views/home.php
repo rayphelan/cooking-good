@@ -24,9 +24,14 @@ include("_header.php");
       <!-- End Recipes -->
 
 
-      <!-- News -->
-      <?php #include("_news.php") ;?>
-      <!-- End News -->
+      <!-- Quote -->
+      <?php include("_quote.php"); ?>
+      <!-- End Quote -->
+
+
+      <!-- Category -->
+      <?php include("_category-section.php") ;?>
+      <!-- End Category -->
 
       
       <!-- Contact -->

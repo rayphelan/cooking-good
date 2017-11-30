@@ -1,10 +1,11 @@
 <footer id="contact-section" class="g-pos-rel">
         <!-- Content -->
-        <div class="g-bg-size-cover g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-pt-120 g-pb-70" style="background-image: url(assets/img-temp/1920x1080/img4.jpg);">
+        <div class="g-bg-size-cover g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-pt-120 g-pb-70" style="background-image: url(<?php print base_url('assets/images/parallax/2.jpg');?>);">
           <div class="container u-bg-overlay__inner">
             <div class="row align-items-center">
               <div class="col-md-4 g-mb-50">
                 <h3 class="h4 g-color-white mb-4">Contact Info</h3>
+
 
                 <!-- Icon Block -->
                 <div class="media align-items-center mb-4">
@@ -14,7 +15,7 @@
                     </span>
                   </div>
                   <div class="media-body">
-                    <p class="g-color-white-opacity-0_6 mb-0">5B Streat, City 50987 New Town US</p>
+                    <p class="g-color-white-opacity-0_6 mb-0">Co. Longford, Ireland</p>
                   </div>
                 </div>
                 <!-- End Icon Block -->
@@ -27,7 +28,7 @@
                     </span>
                   </div>
                   <div class="media-body">
-                    <p class="g-color-white-opacity-0_6 mb-0">+32 (0) 333 444 555</p>
+                    <p class="g-color-white-opacity-0_6 mb-0">+353 (0) 85 722 8681</p>
                   </div>
                 </div>
                 <!-- End Icon Block -->
@@ -40,11 +41,12 @@
                     </span>
                   </div>
                   <div class="media-body">
-                    <p class="g-color-white-opacity-0_6 mb-0">htmlstream@support.com</p>
+                    <p class="g-color-white-opacity-0_6 mb-0">x17119847@student.ncirl.ie</p>
                   </div>
                 </div>
                 <!-- End Icon Block -->
 
+                <?php /*
                 <!-- Social Icons -->
                 <h3 class="h4 g-color-white">Social Networks</h3>
 
@@ -71,6 +73,8 @@
                   </li>
                 </ul>
                 <!-- End Social Icons -->
+                */ ?>
+
               </div>
 
               <div class="col-md-8 g-mb-50">
@@ -83,6 +87,7 @@
                     <div class="col-md-8 g-mb-30">
                       <!-- Contact Form -->
                       <form>
+
                         <div class="mb-3">
                           <input class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 rounded-0 g-py-13 g-px-0 mb-2" type="text" placeholder="Name">
                         </div>
@@ -125,7 +130,7 @@
 
         <!-- Copyright -->
         <div class="container text-center g-py-30">
-          <p class="g-font-size-13 mb-0">&#169; 2017 Htmlstream. All Rights Reserved.</p>
+          <p class="g-font-size-13 mb-0">&#169; 2017 Raymond Phelan | NCI Student No.: 17119847</p>
         </div>
         <!-- End Copyright -->
       </footer>
