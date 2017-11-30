@@ -1,0 +1,5 @@
+/* Add here all your css styles (customizations) */
+
+span.hamburger-inner, span.hamburger-box {
+	color:#f7b221 !important;
+}

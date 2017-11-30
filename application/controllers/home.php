@@ -14,12 +14,11 @@ class Home extends CI_Controller {
 	//	Index
 	public function index() {						
 		
-		print "Hello Cooking Good!";
-				
-		//	Load View
-		#$this->load->view('_header',$data);
-		#$this->load->view('home',$data);
-		#$this->load->view('_footer',$data);		
+		$data['lg'] = $this->lang->lang();
+		
+		//	Load View		
+		$this->load->view('home',$data);
+
 	}
 
 	

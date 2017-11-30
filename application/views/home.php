@@ -1,741 +1,1120 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <?php include("inc.head.php"); ?>
-    </head>
-    <body>
-        <!-- PRELOADER STARTS
-            ========================================================================= --> 
-        <div id="preloader">
-            <div id="status">
-                <div class="spinner"></div>
-            </div>
-        </div>
-        <!-- /. PRELOADER ENDS
-            ========================================================================= -->
-        <!-- HEADER STARTS
-            ========================================================================= -->
-        <div class="navigation fill-black normal normal-nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-8">
-                        <div class="logo">
-                            <a href="<?php print base_url();?>">
-                                <img src="<?php print base_url("assets/images/logos/logo.png");?>" class="img-responsive" alt="The Chef Affairs">
-                            </a>                            
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-4">
-                        <ul class="links hidden-md hidden-sm hidden-xs">
-                            <li><a href="<?php print base_url($lg);?>"><?php print $TR['home'];?></a></li>
-                            <li><a href="#services"><?php print $TR['services'];?></a></li>
-                            <li><a href="#about"><?php print $TR['about'];?></a></li>
-                            <li><a href="#menus"><?php print $TR['menus'];?></a></li>
-                            <li><a href="#testimonials"><?php print $TR['testimonials'];?></a></li>                            
-                            <li><a href="#contact"><?php print $TR['contacts'];?></a></li>                             
-                            <li><a href="<?php print base_url("en");?>"><img src="<?php print base_url("assets/img/en.jpg");?>" alt="English"></a></li>
-                            <li><a href="<?php print base_url("pt");?>"><img src="<?php print base_url("assets/img/pt.gif");?>" alt="Português"></a></li>                          
-                        </ul>
-                        <ul class="links hidden-lg">
-                            <li class="hidden-lg-down"><a id="trigger-overlay"><i class="icon-menu icons"></i></a>                           
-                        </li>
-                    </div>
-                </div>                
-            </div>
-        </div>
-        <!-- /. HEADER ENDS
-            ========================================================================= -->
-        <!-- NAVIGATION STARTS
-            ========================================================================= -->               
-        <div class="overlay overlay-genie" data-steps="m 701.56545,809.01175 35.16718,0 0,19.68384 -35.16718,0 z;m 698.9986,728.03569 41.23353,0 -3.41953,77.8735 -34.98557,0 z;m 687.08153,513.78234 53.1506,0 C 738.0505,683.9161 737.86917,503.34193 737.27015,806 l -35.90067,0 c -7.82727,-276.34892 -2.06916,-72.79261 -14.28795,-292.21766 z;m 403.87105,257.94772 566.31246,2.93091 C 923.38284,513.78233 738.73561,372.23931 737.27015,806 l -35.90067,0 C 701.32034,404.49318 455.17312,480.07689 403.87105,257.94772 z;M 51.871052,165.94772 1362.1835,168.87863 C 1171.3828,653.78233 738.73561,372.23931 737.27015,806 l -35.90067,0 C 701.32034,404.49318 31.173122,513.78234 51.871052,165.94772 z;m 52,26 1364,4 c -12.8007,666.9037 -273.2644,483.78234 -322.7299,776 l -633.90062,0 C 359.32034,432.49318 -6.6979288,733.83462 52,26 z;m 0,0 1439.999975,0 0,805.99999 -1439.999975,0 z">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 806" preserveAspectRatio="none">
-                <path class="overlay-path" d="m 701.56545,809.01175 35.16718,0 0,19.68384 -35.16718,0 z"/>
-            </svg>
-            <button type="button" class="overlay-close overlay-close-btn">Close</button>   
-            <nav>
-                <ul>
-                    <li><a href="<?php print base_url($lg);?>" class="overlay-close-btn"><?php print $TR['home'];?></a></li>
-                    <li><a href="#services" class="overlay-close-btn"><?php print $TR['services'];?></a></li>
-                    <li><a href="#about" class="overlay-close-btn"><?php print $TR['about'];?></a></li>
-                    <li><a href="#menus" class="overlay-close-btn"><?php print $TR['menus'];?></a></li>
-                    <li><a href="#testimonials" class="overlay-close-btn"><?php print $TR['testimonials'];?></a></li>                    
-                    <li><a href="#contact" class="overlay-close-btn"><?php print $TR['contacts'];?></a></li>  
-                    <li><a href="<?php print base_url("en");?>"><img src="<?php print base_url("assets/img/en.jpg");?>" alt="English"></a></li>
-                    <li><a href="<?php print base_url("pt");?>"><img src="<?php print base_url("assets/img/pt.gif");?>" alt="Português"></a></li>                                  
+<?php 
+
+# Header
+include("_header.php");
+
+?>
+
+
+  <body id="home-section">
+    <main>
+      <!-- Header -->
+      <header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance u-header--change-logo"
+              data-header-fix-moment="0">
+        <div class="u-header__section g-bg-black-opacity-0_2 g-transition-0_3 g-py-7 g-py-23--md"
+             data-header-fix-moment-exclude="g-bg-black-opacity-0_5 g-py-23--md"
+             data-header-fix-moment-classes="u-shadow-v19 g-bg-white g-py-15--md">
+          <nav class="navbar navbar-expand-lg g-py-0">
+            <div class="container g-pos-rel">
+              
+
+              <!-- Logo -->
+              <a href="#!" class="js-go-to navbar-brand u-header__logo"
+                 data-type="static">
+                <img class="u-header__logo-img u-header__logo-img--main g-width-90" src="<?php print base_url('assets/images/logo/logo.png');?>" alt="<?php print WEBSITE_TITLE;?>">
+                <img class="u-header__logo-img g-width-90" src="<?php print base_url('assets/images/logo/logo-dark.png');?>" alt="<?php print WEBSITE_TITLE;?>">
+              </a>
+              <!-- End Logo -->
+
+
+              <!-- Navigation -->
+              <div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar">
+                <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-letter-spacing-1 g-font-size-12 g-pt-20 g-pt-0--lg ml-auto">
+                  <li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#home-section" class="nav-link p-0">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#about-section" class="nav-link p-0">About</a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#services-section" class="nav-link p-0">Services</a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#news-section" class="nav-link p-0">News</a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#portfolio-section" class="nav-link p-0">Portfolio</a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#contact-section" class="nav-link p-0">Contact</a>
+                  </li>
+                  <li class="nav-item g-ml-15--lg">
+                    <a href="../../index.html" class="nav-link p-0">Main</a>
+                  </li>
                 </ul>
-            </nav>
+              </div>
+              <!-- End Navigation -->
+
+              <!-- Responsive Toggle Button -->
+              <button class="navbar-toggler btn btn-primary g-pos-abs g-top-15 g-right-0" type="button"
+                      aria-label="Toggle navigation"
+                      aria-expanded="false"
+                      aria-controls="navBar"
+                      data-toggle="collapse"
+                      data-target="#navBar">
+                MENU
+              </button>
+              <!-- End Responsive Toggle Button -->
+            </div>
+          </nav>
         </div>
-        <!-- /. NAVIGATION ENDS
-            ========================================================================= -->
-        <!-- SLIDER STARTS
-            ========================================================================= -->       
-        <div class="slider">
-            <div id="rev_slider_204_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="fullscreen-button44" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-                <!-- START REVOLUTION SLIDER 5.1.1RC auto mode -->
-                <div id="rev_slider_204_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.1.1RC">
-                    <ul>
-                        <!-- SLIDE  -->
-                        <li data-index="rs-681" data-transition="zoomin" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="The Chef Affairs" data-description="">
-                            <!-- MAIN IMAGE -->                         
-                            <img src="<?php print base_url("assets/images/slider/slider-thechefaffairs-1.jpg");?>" alt="The Chef Affairs"  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="140" data-rotatestart="0" data-rotateend="0" data-offsetstart="500 100" data-offsetend="-500 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                            <!-- LAYER NR. 1 -->
-                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" 
-                                id="slide-681-layer-1" 
-                                data-x="['left','left','center','center']" data-hoffset="['50','50','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['-50','-50','-50','-40']" 
-                                data-fontsize="['40','40','20','20']"
-                                data-lineheight="['60','60','60','35']"                              
-                                data-height="none"
-                                data-color="#ffffff"
-                                data-letter-spacing="normal"
-                                data-whitespace="nowrap"
-                                data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
-                                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                                data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                                data-start="500" 
-                                data-splitin="chars" 
-                                data-splitout="none" 
-                                data-elementdelay="0.05" 
-                                data-responsive_offset="on" 
-                                style="z-index: 2; white-space: nowrap; letter-spacing:10px; font-weight:bold;"><?php print $slider_title;?>
-                            </div>
-                            <!-- LAYER NR. 2 -->                            
-                            <div class="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-0" 
-                                id="slide-681-layer-2" 
-                                data-x="['left','left','center','center']" data-hoffset="['50','50','0','0']"  
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-                                data-fontsize="['24','24','24','24']"
-                                data-lineheight="['30','30','30','30']"
-                                data-width="none"
-                                data-height="none"
-                                data-color="#ffff00"
-                                data-whitespace="nowrap"
-                                data-transform_idle="o:1;"
-                                data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" 
-                                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                                data-mask_out="x:inherit;y:inherit;" 
-                                data-start="800" 
-                                data-splitin="none" 
-                                data-splitout="none" 
-                                data-responsive_offset="on" 
-                                style="z-index: 3; white-space: nowrap; text-transform:uppercase; letter-spacing:3px; font-weight:300;"><?php print $slider_description;?>
-                            </div>
-                            
-                        </li>
-                        <!-- /. SLIDE  -->
-                        <!-- SLIDE  -->
-                        <li data-index="rs-682" data-transition="zoomin" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="The Chef Affairs" data-description="">
-                            <!-- MAIN IMAGE -->                         
-                            <img src="<?php print base_url("assets/images/slider/slider-thechefaffairs-2.jpg");?>"  alt="The Chef Affairs"  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="130" data-rotatestart="0" data-rotateend="0" data-offsetstart="500 100" data-offsetend="-500 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                            <!-- LAYER NR. 1 -->
-                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" 
-                                id="slide-682-layer-1" 
-                                data-x="['left','left','center','center']" data-hoffset="['50','50','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['-50','-50','-50','-40']" 
-                                data-fontsize="['40','40','20','20']"
-                                data-lineheight="['60','60','60','35']"                              
-                                data-height="none"
-                                data-color="#ffffff"
-                                data-letter-spacing="normal"
-                                data-whitespace="nowrap"
-                                data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
-                                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                                data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                                data-start="500" 
-                                data-splitin="chars" 
-                                data-splitout="none" 
-                                data-elementdelay="0.05" 
-                                data-responsive_offset="on"
-                                style="z-index: 2; white-space: nowrap; letter-spacing:10px; font-weight: bold;"><?php print $slider_title;?>
-                            </div>
-                            <!-- LAYER NR. 2 -->                            
-                            <div class="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-0" 
-                                id="slide-682-layer-2" 
-                                data-x="['left','left','center','center']" data-hoffset="['50','50','0','0']"  
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-                                data-fontsize="['24','24','24','24']"
-                                data-lineheight="['30','30','30','30']"
-                                data-width="none"
-                                data-height="none"
-                                data-color="#ffff00"
-                                data-whitespace="nowrap"
-                                data-transform_idle="o:1;"
-                                data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" 
-                                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                                data-mask_out="x:inherit;y:inherit;" 
-                                data-start="800" 
-                                data-splitin="none" 
-                                data-splitout="none" 
-                                data-responsive_offset="on" 
-                                style="z-index: 3; white-space: nowrap; text-transform:uppercase; letter-spacing:3px; font-weight:300;"><?php print $slider_description;?>
-                            </div>                            
-                        </li>
-                        <!-- /. SLIDE  -->
-                                              
+      </header>
+      <!-- End Header -->
+
+
+      <!-- Revolution Slider -->
+      <?php include("_slider.php"); ?>
+      <!-- End Revolution Slider -->
+
+
+      <!-- About -->
+      <div id="about-section" class="g-overflow-hidden">
+        <div class="container g-pt-100">
+          <!-- Heading -->
+          <div class="g-max-width-550 text-center mx-auto g-mb-100">
+            <h1 class="text-uppercase g-color-main-light-v1 g-font-weight-600 g-font-size-13 g-letter-spacing-2 mb-4">About Us</h1>
+            <p class="g-font-size-16">Unify creative technology company providing key digital services. Focused on helping our clients to build a successful business on web and mobile.</p>
+          </div>
+          <!-- End Heading -->
+
+          <!-- Icon Blocks -->
+          <ul class="row list-inline u-info-v9-1 g-pb-70 mb-0">
+            <li class="col-md-4 list-inline-item g-mx-0 g-mb-30">
+              <!-- Icon Blocks -->
+              <div class="u-block-hover text-center g-px-40">
+                <div class="g-mb-5">
+                  <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                    <i class="icon-education-024 u-line-icon-pro"></i>
+                  </span>
+                </div>
+                <div class="g-mb-25">
+                  <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-primary g-bg-white g-font-size-9 rounded-circle">
+                    <i class="fa fa-check"></i>
+                  </span>
+                </div>
+                <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                  <span class="g-color-main g-font-weight-700">01.</span>
+                  Consult
+                </h3>
+                <p>We aim high at being focused on building relationships with our clients and community.</p>
+              </div>
+              <!-- End Icon Blocks -->
+            </li>
+
+            <li class="col-md-4 list-inline-item g-mx-0 g-mb-30">
+              <!-- Icon Blocks -->
+              <div class="u-block-hover text-center g-px-40">
+                <div class="g-mb-5">
+                  <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                    <i class="icon-education-073 u-line-icon-pro"></i>
+                  </span>
+                </div>
+                <div class="g-mb-25">
+                  <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-white g-bg-primary g-font-size-9 rounded-circle">
+                    <i class="fa fa-check"></i>
+                  </span>
+                </div>
+                <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                  <span class="g-color-main g-font-weight-700">02.</span>
+                  Create
+                </h3>
+                <p>We strive to embrace and drive change in our industry which allows us to keep our clients relevant.</p>
+              </div>
+              <!-- End Icon Blocks -->
+            </li>
+
+            <li class="col-md-4 list-inline-item g-mx-0 g-mb-30">
+              <!-- Icon Blocks -->
+              <div class="u-block-hover text-center g-px-40">
+                <div class="g-mb-5">
+                  <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                    <i class="icon-communication-180 u-line-icon-pro"></i>
+                  </span>
+                </div>
+                <div class="g-mb-25">
+                  <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-primary g-bg-white g-font-size-9 rounded-circle">
+                    <i class="fa fa-check"></i>
+                  </span>
+                </div>
+                <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                  <span class="g-color-main g-font-weight-700">03.</span>
+                  Release
+                </h3>
+                <p>At the end of the day, it's important to not let being busy distract us from having fun.</p>
+              </div>
+              <!-- End Icon Blocks -->
+            </li>
+          </ul>
+          <!-- End Icon Blocks -->
+
+          <!-- Mockup Image -->
+          <img class="img-fluid w-100" src="assets/img-temp/1445x750/img1.png" alt="Image Description">
+          <!-- End Mockup Image -->
+
+          <div class="g-pt-100 g-pb-70">
+            <!-- Heading -->
+            <div class="g-max-width-550 text-center mx-auto g-mb-100">
+              <div class="d-inline-block g-width-60 g-height-2 g-bg-secondary-light-v1 mb-3"></div>
+              <h2 class="h3">Our end to end suite includes Customer Support, Responsiveness, 1610+ Ui Elements and more.</h2>
+            </div>
+            <!-- End Heading -->
+
+            <!-- Vision & Mission -->
+            <div class="g-pos-rel">
+              <div class="row justify-content-between">
+                <div class="col-lg-5 g-mb-30">
+                  <div class="g-mt-20 mb-5">
+                    <h3 class="h6 text-uppercase g-color-main-light-v1 g-font-weight-600 g-letter-spacing-2 mb-3">Vision</h3>
+                    <h2 class="mb-4">Our Vision and Mission</h2>
+                    <p class="g-line-height-2">We aim high at being focused on building relationships with our clients and community. Working together on the daily requires each individual to let the greater good of the team's work surface above their own ego.</p>
+                  </div>
+
+                  <!-- Icon Block -->
+                  <div class="media mb-4">
+                    <div class="d-flex mr-4">
+                      <span class="u-icon-v3 g-width-50 g-height-50 g-color-bluegray g-bg-bluegray-opacity-0_1 g-font-size-16 rounded-circle">
+                        <i class="icon-communication-114 u-line-icon-pro"></i>
+                      </span>
+                    </div>
+                    <div class="media-body">
+                      <span class="g-font-weight-700">31,500+</span>
+                      <p class="g-text">Happy clients all over the world</p>
+                    </div>
+                  </div>
+                  <!-- End Icon Block -->
+
+                  <!-- Icon Block -->
+                  <div class="media mb-4">
+                    <div class="d-flex mr-4">
+                      <span class="u-icon-v3 g-width-50 g-height-50 g-color-primary g-bg-primary-opacity-0_1 g-font-size-16 rounded-circle">
+                        <i class="icon-finance-091 u-line-icon-pro"></i>
+                      </span>
+                    </div>
+                    <div class="media-body">
+                      <span class="g-font-weight-700">No. 1</span>
+                      <p class="g-text">WrapBootstrap theme of all time</p>
+                    </div>
+                  </div>
+                  <!-- End Icon Block -->
+
+                  <!-- Icon Block -->
+                  <div class="media mb-4">
+                    <div class="d-flex mr-4">
+                      <span class="u-icon-v3 g-width-50 g-height-50 g-color-red g-bg-red-opacity-0_1 g-font-size-16 rounded-circle">
+                        <i class="icon-communication-116 u-line-icon-pro"></i>
+                      </span>
+                    </div>
+                    <div class="media-body">
+                      <span class="g-font-weight-700">1610+</span>
+                      <p class="g-text">UI Elements &amp; Features</p>
+                    </div>
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+              </div>
+
+              <div class="col-lg-6 g-pos-abs--lg g-top-0--lg g-right-0--lg g-mb-30">
+                <img class="w-100 g-width-auto--lg" src="assets/img-temp/900x535/img1.png" alt="Image Description">
+              </div>
+            </div>
+            <!-- End Vision & Mission -->
+          </div>
+        </div>
+      </div>
+      <!-- End About -->
+
+      <!-- Quote -->
+      <div class="dzsparallaxer auto-init height-is-based-on-content use-loading" data-options='{direction: "reverse", settings_mode_oneelement_max_offset: "150"}'>
+        <div class="divimage dzsparallaxer--target w-100 g-bg-size-cover g-bg-img-hero g-bg-cover g-bg-black-opacity-0_6--after" style="height: 130%; background-image: url(assets/img-temp/1920x1080/img5.jpg);"></div>
+
+        <div class="container text-center g-pos-rel g-z-index-1 g-py-100">
+          <blockquote class="g-color-white g-font-family-merriweather g-font-size-30 g-font-size-40--md g-line-height-1_4 g-mb-50">
+            <span class="g-color-primary g-font-family-ptsans g-font-size-90 g-line-height-0_7 g-pos-rel g-top-30">&#8220;</span>
+            If you can design one thing you can design everything. Just believe it.
+            <span class="g-color-primary g-font-family-ptsans g-font-size-90 g-line-height-0_7 g-pos-rel g-top-30">&#8221;</span>
+          </blockquote>
+          <h4 class="g-color-white g-font-size-15 text-uppercase mb-1"><span class="d-inline-block align-middle g-width-40 g-height-2 g-bg-primary mr-3"></span> Hmlstream</h4>
+        </div>
+      </div>
+      <!-- End Quote -->
+
+      <!-- Team -->
+      <div class="container g-py-100">
+        <!-- Heading -->
+        <div class="g-max-width-550 text-center mx-auto g-mb-100">
+          <h2 class="text-uppercase g-color-main-light-v1 g-font-weight-600 g-font-size-13 g-letter-spacing-2 mb-4">What are you waiting for?</h2>
+          <h2 class="h3">Join thousands of Unifiers making a difference every day using Unify.</h2>
+        </div>
+        <!-- End Heading -->
+
+        <div class="row g-mx-minus-25 g-mb-40">
+          <div class="col-6 col-lg-3 g-px-25 g-mb-50">
+            <!-- Team -->
+            <div class="text-center">
+              <img class="u-shadow-v29 g-width-110 g-height-110 rounded-circle mb-5" src="assets/img-temp/200x200/img1.jpg" alt="Image Description">
+              <h4 class="h5 g-font-weight-600 mb-1">Alex Taylor</h4>
+              <span class="d-block g-color-primary">Founder</span>
+              <hr class="g-brd-gray-light-v4 g-my-15">
+              <a class="u-link-v5 g-color-text g-color-main--hover g-font-size-13" href="#!">alex@gmail.com</a>
+            </div>
+            <!-- End Team -->
+          </div>
+
+          <div class="col-6 col-lg-3 g-px-25 g-mb-50">
+            <!-- Team -->
+            <div class="text-center">
+              <img class="u-shadow-v29 g-width-110 g-height-110 rounded-circle mb-5" src="assets/img-temp/200x200/img3.jpg" alt="Image Description">
+              <h4 class="h5 g-font-weight-600 mb-1">Kate Metu</h4>
+              <span class="d-block g-color-primary">Manager</span>
+              <hr class="g-brd-gray-light-v4 g-my-15">
+              <a class="u-link-v5 g-color-text g-color-main--hover g-font-size-13" href="#!">kate@gmail.com</a>
+            </div>
+            <!-- End Team -->
+          </div>
+
+          <div class="col-6 col-lg-3 g-px-25 g-mb-50">
+            <!-- Team -->
+            <div class="text-center">
+              <img class="u-shadow-v29 g-width-110 g-height-110 rounded-circle mb-5" src="assets/img-temp/200x200/img4.jpg" alt="Image Description">
+              <h4 class="h5 g-font-weight-600 mb-1">Daniel Wearne</h4>
+              <span class="d-block g-color-primary">Developer</span>
+              <hr class="g-brd-gray-light-v4 g-my-15">
+              <a class="u-link-v5 g-color-text g-color-main--hover g-font-size-13" href="#!">daniel@gmail.com</a>
+            </div>
+            <!-- End Team -->
+          </div>
+
+          <div class="col-6 col-lg-3 g-px-25 g-mb-50">
+            <!-- Team -->
+            <div class="text-center">
+              <img class="u-shadow-v29 g-width-110 g-height-110 rounded-circle mb-5" src="assets/img-temp/200x200/img2.jpg" alt="Image Description">
+              <h4 class="h5 g-font-weight-600 mb-1">Tina Krueger</h4>
+              <span class="d-block g-color-primary">Designer</span>
+              <hr class="g-brd-gray-light-v4 g-my-15">
+              <a class="u-link-v5 g-color-text g-color-main--hover g-font-size-13" href="#!">tina@gmail.com</a>
+            </div>
+            <!-- End Team -->
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a class="btn u-btn-primary g-bg-secondary g-color-primary g-color-white--hover g-bg-primary--hover g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" href="#!">Join Unify</a>
+        </div>
+      </div>
+      <!-- End Team -->
+
+      <!-- Services -->
+      <div id="services-section" class="g-bg-secondary g-py-100">
+        <div class="container">
+          <!-- Heading -->
+          <div class="g-max-width-550 text-center mx-auto g-mb-70">
+            <h2 class="text-uppercase g-color-main-light-v1 g-font-weight-600 g-font-size-13 g-letter-spacing-2 mb-4">Are we a perfect fit?</h2>
+            <h2 class="h3 mb-5">Are Unify's re-usability features<br>perfect for You?</h2>
+          </div>
+          <!-- End Heading -->
+
+          <div class="row justify-content-center g-mb-20">
+            <div class="col-md-6 col-lg-4 g-mb-50">
+              <!-- Services -->
+              <div class="u-shadow-v28 g-bg-white text-left text-md-center rounded g-py-40">
+                <!-- Services - Header -->
+                <header class="text-center g-px-30 mb-5">
+                  <div class="g-mb-25">
+                    <span class="u-icon-v2 u-icon-size--md g-brd-text g-color-primary rounded-circle">
+                      <i class="icon-finance-211 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <h2 class="h5 g-font-weight-600">Marketing &amp; Consulting</h2>
+                  <p class="g-font-size-13">This is where we sit down, grab a cup of coffee and dial in the details.</p>
+                </header>
+                <!-- End Services - Header -->
+
+                <!-- Services - List -->
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#21a79b"/>
+                    </svg>
+                    <span class="g-color-text ml-3">24/7 support</span>
+                  </li>
+                  <li class="d-flex align-items-center u-shadow-v19 g-bg-secondary g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#21a79b"/>
+                    </svg>
+                    <span class="g-color-text ml-3">1610+ elements</span>
+                  </li>
+                  <li class="d-flex align-items-center g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#21a79b"/>
+                    </svg>
+                    <span class="g-color-text ml-3">400+ pages</span>
+                  </li>
+                  <li class="d-flex align-items-center u-shadow-v19 g-bg-secondary g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#21a79b"/>
+                    </svg>
+                    <span class="g-color-text ml-3">Unlimited domain or user</span>
+                  </li>
+                </ul>
+                <!-- End Services - List -->
+              </div>
+              <!-- End Services -->
+            </div>
+
+            <div class="col-md-6 col-lg-4 g-mb-50">
+              <!-- Services -->
+              <div class="u-shadow-v29 g-bg-primary text-left text-md-center rounded g-py-40">
+                <!-- Services - Header -->
+                <header class="text-center g-px-35 mb-5">
+                  <div class="g-mb-25">
+                    <span class="u-icon-v3 u-icon-size--md g-color-text g-bg-secondary rounded-circle">
+                      <i class="icon-finance-257 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <h2 class="h5 g-color-white g-font-weight-600">SEO &amp; Advertising</h2>
+                  <p class="g-color-white-opacity-0_9 g-font-size-13">Now that we've aligned the details, it's time to get things organized.</p>
+                </header>
+                <!-- End Services - Header -->
+
+                <!-- Services - List -->
+                <ul class="list-unstyled g-color-white-opacity-0_8 mb-0">
+                  <li class="d-flex align-items-center g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#fff"/>
+                    </svg>
+                    <span class="ml-3">24/7 support</span>
+                  </li>
+                  <li class="d-flex align-items-center u-shadow-v19 g-bg-white-opacity-0_1 g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#fff"/>
+                    </svg>
+                    <span class="ml-3">1610+ elements</span>
+                  </li>
+                  <li class="d-flex align-items-center g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#fff"/>
+                    </svg>
+                    <span class="ml-3">400+ pages</span>
+                  </li>
+                  <li class="d-flex align-items-center u-shadow-v19 g-bg-white-opacity-0_1 g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#fff"/>
+                    </svg>
+                    <span class="ml-3">Unlimited domain or user</span>
+                  </li>
+                </ul>
+                <!-- End Services - List -->
+              </div>
+              <!-- End Services -->
+            </div>
+
+            <div class="col-md-6 col-lg-4 g-mb-50">
+              <!-- Services -->
+              <div class="u-shadow-v28 g-bg-white text-left text-md-center rounded g-py-40">
+                <!-- Services - Header -->
+                <header class="text-center g-px-35 mb-5">
+                  <div class="g-mb-25">
+                    <span class="u-icon-v2 u-icon-size--md g-brd-text g-color-primary rounded-circle">
+                      <i class="icon-communication-164 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <h2 class="h5 g-font-weight-600">Design &amp; Development</h2>
+                  <p class="g-font-size-13">This is where we begin to visualize your sketches and make them into beautiful pixels.</p>
+                </header>
+                <!-- End Services - Header -->
+
+                <!-- Services - List -->
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#21a79b"/>
+                    </svg>
+                    <span class="g-color-text ml-3">24/7 support</span>
+                  </li>
+                  <li class="d-flex align-items-center u-shadow-v19 g-bg-secondary g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#21a79b"/>
+                    </svg>
+                    <span class="g-color-text ml-3">1610+ elements</span>
+                  </li>
+                  <li class="d-flex align-items-center g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#21a79b"/>
+                    </svg>
+                    <span class="g-color-text ml-3">400+ pages</span>
+                  </li>
+                  <li class="d-flex align-items-center u-shadow-v19 g-bg-secondary g-px-35 g-py-15">
+                    <svg width="13" height="13" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#21a79b"/>
+                    </svg>
+                    <span class="g-color-text ml-3">Unlimited domain or user</span>
+                  </li>
+                </ul>
+                <!-- End Services - List -->
+              </div>
+              <!-- End Services -->
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a class="btn u-btn-outline-primary g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" href="https://wrapbootstrap.com/theme/unify-responsive-website-template-WB0412697?ref=htmlstream">Purchase Unify</a>
+          </div>
+        </div>
+      </div>
+      <!-- End Services -->
+
+      <!-- Counters -->
+      <div class="dzsparallaxer auto-init height-is-based-on-content use-loading" data-options='{direction: "reverse", settings_mode_oneelement_max_offset: "150"}'>
+        <div class="divimage dzsparallaxer--target w-100 g-bg-size-cover g-bg-img-hero g-bg-cover g-bg-black-opacity-0_7--after" style="height: 130%; background-image: url(assets/img-temp/1920x500/img2.jpg);"></div>
+
+        <div class="container g-pt-100 g-pb-70">
+          <div class="row">
+            <div class="col-sm-6 col-lg-3 align-items-end mt-auto g-mb-50">
+              <div class="text-center">
+                <span class="js-counter g-color-primary g-font-weight-600 g-font-size-60 g-line-height-0_9 mr-2">75</span>
+                <h3 class="d-inline-block g-color-secondary g-font-weight-600 g-font-size-22 mb-0">Clients</h3>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 align-items-end mt-auto g-mb-50">
+              <div class="text-center">
+                <span class="js-counter g-color-primary g-font-weight-600 g-font-size-60 g-line-height-0_9 mr-2">20</span>
+                <h3 class="d-inline-block g-color-secondary g-font-weight-600 g-font-size-22 mb-0">Products</h3>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 align-items-end mt-auto g-mb-50">
+              <div class="text-center">
+                <span class="js-counter g-color-primary g-font-weight-600 g-font-size-60 g-line-height-0_9 mr-2">15</span>
+                <h3 class="d-inline-block g-color-secondary g-font-weight-600 g-font-size-22 mb-0">Members</h3>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 align-items-end mt-auto g-mb-50">
+              <div class="text-center">
+                <span class="js-counter g-color-primary g-font-weight-600 g-font-size-60 g-line-height-0_9 mr-2">50</span>
+                <h3 class="d-inline-block g-color-secondary g-font-weight-600 g-font-size-22 mb-0">Projects</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Counters -->
+
+      <!-- Cube Portfolio Blocks - Content -->
+      <div id="portfolio-section" class="container g-py-100">
+        <!-- Heading -->
+        <div class="g-max-width-550 text-center mx-auto g-mb-70">
+          <h2 class="text-uppercase g-color-main-light-v1 g-font-weight-600 g-font-size-13 g-letter-spacing-2 mb-4">We've Done some Amazing Jobs</h2>
+          <h2 class="h3 mb-5">Experience a level of quality in both design &amp; customization.</h2>
+        </div>
+        <!-- End Heading -->
+
+        <!-- Cube Portfolio Blocks - Filter -->
+        <ul id="filterControls" class="d-block list-inline text-center g-mb-50">
+          <li class="list-inline-item cbp-filter-item cbp-filter-item-active g-brd-around g-brd-secondary-light-v2 g-brd-primary--active g-color-gray-dark-v4 g-color-primary--hover g-color-primary--active g-font-size-13 g-rounded-30 g-transition-0_3 g-px-20 g-py-7 mb-2" role="button"
+              data-filter="*">All
+          </li>
+          <li class="list-inline-item cbp-filter-item g-brd-around g-brd-secondary-light-v2 g-brd-primary--active g-color-gray-dark-v4 g-color-primary--hover g-color-primary--active g-font-size-13 g-rounded-30 g-transition-0_3 g-px-20 g-py-7 mb-2" role="button"
+              data-filter=".identity">Identity
+          </li>
+          <li class="list-inline-item cbp-filter-item g-brd-around g-brd-secondary-light-v2 g-brd-primary--active g-color-gray-dark-v4 g-color-primary--hover g-color-primary--active g-font-size-13 g-rounded-30 g-transition-0_3 g-px-20 g-py-7 mb-2" role="button"
+              data-filter=".design">Design
+          </li>
+          <li class="list-inline-item cbp-filter-item g-brd-around g-brd-secondary-light-v2 g-brd-primary--active g-color-gray-dark-v4 g-color-primary--hover g-color-primary--active g-font-size-13 g-rounded-30 g-transition-0_3 g-px-20 g-py-7 mb-2" role="button"
+              data-filter=".design, .identity">Design &amp; Identity
+          </li>
+        </ul>
+        <!-- End Cube Portfolio Blocks - Filter -->
+
+        <div class="cbp g-mb-50"
+             data-controls="#filterControls"
+             data-animation="quicksand"
+             data-x-gap="30"
+             data-y-gap="30"
+             data-media-queries='[
+               {"width": 1500, "cols": 3},
+               {"width": 1100, "cols": 3},
+               {"width": 800, "cols": 3},
+               {"width": 480, "cols": 2},
+               {"width": 300, "cols": 1}
+             ]'>
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item identity design">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img-temp/500x335/img1.jpg" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
+                      <i class="icon-communication-095 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img-temp/500x335/img1.jpg">
+                      <i class="icon-communication-017 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Branding work</h3>
+              <p class="mb-0">Identity, Design</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item design">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img-temp/500x335/img2.jpg" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
+                      <i class="icon-communication-095 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img-temp/500x335/img2.jpg">
+                      <i class="icon-communication-017 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Development</h3>
+              <p class="mb-0">Design</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item identity">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img-temp/500x335/img3.jpg" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
+                      <i class="icon-communication-095 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img-temp/500x335/img3.jpg">
+                      <i class="icon-communication-017 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Project planner</h3>
+              <p class="mb-0">Graphic, Identity</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item design">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img-temp/500x335/img4.jpg" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
+                      <i class="icon-communication-095 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img-temp/500x335/img4.jpg">
+                      <i class="icon-communication-017 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Design</h3>
+              <p class="mb-0">Graphic</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item identity">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img-temp/500x335/img5.jpg" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
+                      <i class="icon-communication-095 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img-temp/500x335/img5.jpg">
+                      <i class="icon-communication-017 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Creative agency</h3>
+              <p class="mb-0">Identity</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item identity">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img-temp/500x335/img6.jpg" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
+                      <i class="icon-communication-095 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img-temp/500x335/img6.jpg">
+                      <i class="icon-communication-017 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Production</h3>
+              <p class="mb-0">Graphic</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+        </div>
+
+        <div class="text-center">
+          <a class="btn u-btn-primary g-bg-secondary g-color-primary g-color-white--hover g-bg-primary--hover g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" href="#!">View all Unify works</a>
+        </div>
+      </div>
+      <!-- End Cube Portfolio Blocks - Content -->
+
+      <!-- News -->
+      <div id="news-section" class="g-bg-secondary g-py-100">
+        <div class="container">
+          <!-- Heading -->
+          <div class="g-max-width-550 text-center mx-auto g-mb-70">
+            <h2 class="text-uppercase g-color-main-light-v1 g-font-weight-600 g-font-size-13 g-letter-spacing-2 mb-4">News Blog</h2>
+            <h2 class="h3 mb-5">Read the latest news and blogs.</h2>
+          </div>
+          <!-- End Heading -->
+
+          <div class="row g-mx-minus-25 g-mb-50">
+            <div class="col-lg-6 g-px-25 g-mb-50">
+              <!-- Blog Grid Modern Blocks -->
+              <article class="row align-items-stretch no-gutters u-shadow-v29 g-transition-0_3">
+                <div class="col-sm-6 g-bg-white g-rounded-left-5">
+                  <div class="g-pa-35">
+                    <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-12">
+                      <li class="list-inline-item mr-0">Alex Teseira</li>
+                      <li class="list-inline-item mx-2">&#183;</li>
+                      <li class="list-inline-item">5 June 2017</li>
                     </ul>
-                    <div class="tp-bannertimer tp-bottom" style="height: 3px; background-color: rgba(179, 149, 0, 1);"></div>
+
+                    <h2 class="h5 g-color-black g-font-weight-600 mb-4">
+                      <a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="#!">Announcing a free plan for small teams</a>
+                    </h2>
+                    <p class="g-color-gray-dark-v4 g-line-height-1_8 mb-4">At Wake, our mission has always been focused on bringing.</p>
+
+                    <ul class="list-inline g-font-size-12 mb-0">
+                      <li class="list-inline-item g-mb-10">
+                        <a class="u-tags-v1 g-color-blue g-bg-blue-opacity-0_1 g-bg-blue--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15" href="#!">Start-Up</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+                <div class="col-sm-6 g-bg-size-cover g-bg-pos-center g-min-height-300 g-rounded-right-5" data-bg-img-src="assets/img-temp/400x500/img1.jpg"></div>
+              </article>
+              <!-- End Blog Grid Modern Blocks -->
             </div>
-        </div>
-        <!-- /. SLIDER ENDS
-            ========================================================================= -->
-        <!-- HOME INTRO STARTS
-            ========================================================================= -->
-        <div class="container home-intro">            
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">          
-                    <div class="icon">
-                        <img src="<?php print base_url("assets/images/logos/logo2.png");?>" width="100">
-                    </div>          
-                    <h1><?php print $welcome_title;?></span></h1>
-                    <div class="description"><?php print $welcome_description;?>
-                    </div>
+
+            <div class="col-lg-6 g-px-25 g-mb-50">
+              <!-- Blog Grid Modern Blocks -->
+              <article class="row align-items-stretch no-gutters u-shadow-v29 g-transition-0_3">
+                <div class="col-sm-6 g-bg-white g-rounded-left-5">
+                  <div class="g-pa-35">
+                    <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-12">
+                      <li class="list-inline-item mr-0">Alex Teseira</li>
+                      <li class="list-inline-item mx-2">&#183;</li>
+                      <li class="list-inline-item">5 June 2017</li>
+                    </ul>
+
+                    <h2 class="h5 g-color-black g-font-weight-600 mb-4">
+                      <a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="#!">Exclusive interview with InVision's CEO</a>
+                    </h2>
+                    <p class="g-color-gray-dark-v4 g-line-height-1_8 mb-4">Clara Valberg is the founder and CEO of InVision.</p>
+
+                    <ul class="list-inline g-font-size-12 mb-0">
+                      <li class="list-inline-item g-mb-10">
+                        <a class="u-tags-v1 g-color-brown g-bg-brown-opacity-0_1 g-bg-brown--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15" href="#!">Start-Up</a>
+                      </li>
+                      <li class="list-inline-item g-mb-10">
+                        <a class="u-tags-v1 g-color-pink g-bg-pink-opacity-0_1 g-bg-pink--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15" href="#!">Interview</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+                <div class="col-sm-6 g-bg-size-cover g-bg-pos-center g-min-height-300 g-rounded-right-5" data-bg-img-src="assets/img-temp/400x500/img2.jpg"></div>
+              </article>
+              <!-- End Blog Grid Modern Blocks -->
             </div>
-        </div>
-        <!-- /. HOME INTRO ENDS
-            ========================================================================= -->
-        <!-- AMAZING FEATURES STARTS
-            ========================================================================= -->
-        <div id="services"><p>&nbsp;</p></div>
-        <div class="parallax-1 amazing-features">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1><?php print $services_title;?></h1>
-                        <div class="description">
-                            <?php print $services_description;?>
-                        </div>                                            
-                    </div>                    
+
+            <div class="w-100"></div>
+
+            <div class="col-lg-6 g-px-25 g-mb-50">
+              <!-- Blog Grid Modern Blocks -->
+              <article class="row align-items-stretch no-gutters u-shadow-v29 g-transition-0_3">
+                <div class="col-sm-6 g-bg-white g-rounded-left-5">
+                  <div class="g-pa-35">
+                    <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-12">
+                      <li class="list-inline-item mr-0">Alex Teseira</li>
+                      <li class="list-inline-item mx-2">&#183;</li>
+                      <li class="list-inline-item">5 June 2017</li>
+                    </ul>
+
+                    <h2 class="h5 g-color-black g-font-weight-600 mb-4">
+                      <a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="#!">V’s Barbershop Opening First South Florida Location</a>
+                    </h2>
+                    <p class="g-color-gray-dark-v4 g-line-height-1_8 mb-4">There’s nothing like a good barbershop.</p>
+
+                    <ul class="list-inline g-font-size-12 mb-0">
+                      <li class="list-inline-item g-mb-10">
+                        <a class="u-tags-v1 g-color-bluegray g-bg-bluegray-opacity-0_1 g-bg-bluegray--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15" href="#!">Barber</a>
+                      </li>
+                      <li class="list-inline-item g-mb-10">
+                        <a class="u-tags-v1 g-color-primary g-bg-primary-opacity-0_1 g-bg-primary--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15" href="#!">Style</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 block">
-                        <div class="icon">
-                            <a href="<?php print base_url("$lg/section/view/4");?>">
-                                <img src="<?php print base_url("assets/images/logos/logo-60x60.png");?>" alt="<?php print $service_tag1;?>" title="<?php print $service_tag1;?>">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="<?php print base_url("$lg/section/view/4");?>"><?php print $service1_title;?></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 block">
-                        <div class="icon">
-                            <a href="<?php print base_url("$lg/section/view/6");?>">
-                                <img src="<?php print base_url("assets/images/logos/logo-60x60.png");?>" alt="<?php print $service_tag2;?>" title="<?php print $service_tag2;?>">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="<?php print base_url("$lg/section/view/6");?>"><?php print $service2_title;?></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 block">
-                        <div class="icon">
-                            <a href="<?php print base_url("$lg/section/view/5");?>">
-                                <img src="<?php print base_url("assets/images/logos/logo-60x60.png");?>" alt="<?php print $service_tag3;?>" title="<?php print $service_tag3;?>">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="<?php print base_url("$lg/section/view/5");?>"><?php print $service3_title;?></a>
-                        </div>
-                    </div>
-                </div>                
+                <div class="col-sm-6 g-bg-size-cover g-bg-pos-center g-min-height-300 g-rounded-right-5" data-bg-img-src="assets/img-temp/400x500/img3.jpg"></div>
+              </article>
+              <!-- End Blog Grid Modern Blocks -->
             </div>
+
+            <div class="col-lg-6 g-px-25 g-mb-50">
+              <!-- Blog Grid Modern Blocks -->
+              <article class="row align-items-stretch no-gutters u-shadow-v29 g-transition-0_3">
+                <div class="col-sm-6 g-bg-white g-rounded-left-5">
+                  <div class="g-pa-35">
+                    <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-12">
+                      <li class="list-inline-item mr-0">Alex Teseira</li>
+                      <li class="list-inline-item mx-2">&#183;</li>
+                      <li class="list-inline-item">5 June 2017</li>
+                    </ul>
+
+                    <h2 class="h5 g-color-black g-font-weight-600 mb-4">
+                      <a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="#!">The Hypnotic Allure of Cinemagraphic Waves</a>
+                    </h2>
+                    <p class="g-color-gray-dark-v4 g-line-height-1_8 mb-4">Ocean waves are, by definition, in a constant state of motion.</p>
+
+                    <ul class="list-inline g-font-size-12 mb-0">
+                      <li class="list-inline-item g-mb-10">
+                        <a class="u-tags-v1 g-color-brown g-bg-brown-opacity-0_1 g-bg-brown--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15" href="#!">Animation</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-6 g-bg-size-cover g-bg-pos-center g-min-height-300 g-rounded-right-5" data-bg-img-src="assets/img-temp/400x500/img4.jpg"></div>
+              </article>
+              <!-- End Blog Grid Modern Blocks -->
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a class="btn u-btn-outline-primary g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" href="">Read more News</a>
+          </div>
         </div>
-        <!-- /. AMAZING FEATURES ENDS
-            ========================================================================= -->   
-        <!-- ABOUS US STARTS
-            ========================================================================= --> 
-        <div id="about"><p>&nbsp;</p></div>      
-        <div class="container-fluid what-we-do">
-            <div class="row no-gutter-6">
-                
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h1><?php print $about_title;?></h1>
-                    <div class="description">
-                        
-                        <img src="<?php print $about_image;?>" class="about-us-pic pull-right" alt="<?php print $about_tag;?>" title="<?php print $about_tag;?>">
-                        
-                        <!-- Short Version -->
-                        <div class="hidden-lg hidden-md hidden-sm">
-                            <?php print $about_short_description;?>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
-                                <?php print $TR['read_more'];?>
-                            </button>
+      </div>
+      <!-- End News -->
+
+      <!-- Clients -->
+      <div class="container u-shadow-v29 g-bg-size-cover g-bg-img-hero g-bg-cover g-bg-black-opacity-0_5--after g-rounded-100 g-rounded-100--after g-mt-100 g-mb-10 g-py-60" style="background-image: url(assets/img-temp/1920x500/img1.jpg);">
+        <div class="js-carousel g-pos-rel g-z-index-1"
+             data-infinite="true"
+             data-autoplay="true"
+             data-lazy-load="ondemand"
+             data-slides-show="6"
+             data-responsive='[{
+               "breakpoint": 1200,
+               "settings": {
+                 "slidesToShow": 6
+               }
+             }, {
+               "breakpoint": 992,
+               "settings": {
+                 "slidesToShow": 4
+               }
+             }, {
+               "breakpoint": 768,
+               "settings": {
+                 "slidesToShow": 3
+               }
+             }, {
+               "breakpoint": 576,
+               "settings": {
+                 "slidesToShow": 3
+               }
+             }, {
+               "breakpoint": 446,
+               "settings": {
+                 "slidesToShow": 2
+               }
+             }]'>
+          <div class="js-slide u-block-hover">
+            <img class="mx-auto g-width-80 u-block-hover__main--white g-opacity-0_8 g-opacity-1--hover g-cursor-pointer" data-lazy="../../assets/img-temp/200x100/img1.png" alt="Image description">
+          </div>
+
+          <div class="js-slide u-block-hover">
+            <img class="mx-auto g-width-80 u-block-hover__main--white g-opacity-0_8 g-opacity-1--hover g-cursor-pointer" data-lazy="../../assets/img-temp/200x100/img2.png" alt="Image description">
+          </div>
+
+          <div class="js-slide u-block-hover">
+            <img class="mx-auto g-width-80 u-block-hover__main--white g-opacity-0_8 g-opacity-1--hover g-cursor-pointer" data-lazy="../../assets/img-temp/200x100/img3.png" alt="Image description">
+          </div>
+
+          <div class="js-slide u-block-hover">
+            <img class="mx-auto g-width-80 u-block-hover__main--white g-opacity-0_8 g-opacity-1--hover g-cursor-pointer" data-lazy="../../assets/img-temp/200x100/img4.png" alt="Image description">
+          </div>
+
+          <div class="js-slide u-block-hover">
+            <img class="mx-auto g-width-80 u-block-hover__main--white g-opacity-0_8 g-opacity-1--hover g-cursor-pointer" data-lazy="../../assets/img-temp/200x100/img5.png" alt="Image description">
+          </div>
+
+          <div class="js-slide u-block-hover">
+            <img class="mx-auto g-width-80 u-block-hover__main--white g-opacity-0_8 g-opacity-1--hover g-cursor-pointer" data-lazy="../../assets/img-temp/200x100/img7.png" alt="Image description">
+          </div>
+
+          <div class="js-slide u-block-hover">
+            <img class="mx-auto g-width-80 u-block-hover__main--white g-opacity-0_8 g-opacity-1--hover g-cursor-pointer" data-lazy="../../assets/img-temp/200x100/img8.png" alt="Image description">
+          </div>
+        </div>
+      </div>
+      <!-- End Clients -->
+
+      <!-- Testimonials -->
+      <div class="container g-pt-70 g-pb-100">
+        <div id="carouselCus2" class="js-carousel u-carousel-indicators-v32 g-pos-stc g-width-200 text-center mx-auto g-mb-20"
+         data-infinite="true"
+         data-center-mode="true"
+         data-slides-show="3"
+         data-is-thumbs="true"
+         data-nav-for="#carouselCus1">
+          <div class="js-slide d-flex text-center g-opacity-1 g-cursor-pointer g-px-13 g-py-50">
+            <img class="u-shadow-v22 u-carousel-indicators-v32-img g-width-40 g-height-40 g-brd-around g-brd-2 g-brd-transparent rounded-circle" src="assets/img-temp/100x100/img3.jpg" alt="Image Description">
+          </div>
+
+          <div class="js-slide d-flex text-center g-opacity-1 g-cursor-pointer g-px-13 g-py-50">
+            <img class="u-shadow-v22 u-carousel-indicators-v32-img g-width-40 g-height-40 g-brd-around g-brd-2 g-brd-transparent rounded-circle" src="assets/img-temp/100x100/img2.jpg" alt="Image Description">
+          </div>
+
+          <div class="js-slide d-flex text-center g-opacity-1 g-cursor-pointer g-px-13 g-py-50">
+            <img class="u-shadow-v22 u-carousel-indicators-v32-img g-width-40 g-height-40 g-brd-around g-brd-2 g-brd-transparent rounded-circle" src="assets/img-temp/100x100/img1.jpg" alt="Image Description">
+          </div>
+
+          <div class="js-slide d-flex text-center g-opacity-1 g-cursor-pointer g-px-13 g-py-50">
+            <img class="u-shadow-v22 u-carousel-indicators-v32-img g-width-40 g-height-40 g-brd-around g-brd-2 g-brd-transparent rounded-circle" src="assets/img-temp/100x100/img4.jpg" alt="Image Description">
+          </div>
+        </div>
+
+        <div id="carouselCus1" class="js-carousel g-px-50 g-px-200--lg"
+             data-infinite="true"
+             data-arrows-classes="u-arrow-v1 g-absolute-centered--y g-width-45 g-height-45 g-font-size-30 g-color-main-light-v1 g-color-primary--hover"
+             data-arrow-left-classes="fa fa-angle-left g-left-0 g-left-40--lg g-mt-minus-50"
+             data-arrow-right-classes="fa fa-angle-right g-right-0 g-right-40--lg g-mt-minus-50"
+             data-nav-for="#carouselCus2">
+
+          <div class="js-slide text-center">
+            <blockquote class="g-color-text g-font-size-default g-font-size-18--md g-mb-60">Your customer support is the best I have experienced with any theme I have purchased. You have a theme that far exceeds all others. Thanks for providing such a fantastic theme, all your efforts are greatly appreciated on our end.</blockquote>
+              <h4 class="g-font-weight-700 g-font-size-15 g-mb-1">Dick Pottorf</h4>
+              <span class="d-block g-color-text g-font-size-13">Reason: Unify Support</span>
+          </div>
+
+          <div class="js-slide text-center">
+            <blockquote class="g-color-text g-font-size-default g-font-size-18--md g-mb-60">Hi there purchased a couple of days ago and the site looks great, big thanks to the htmlstream guys, they gave me some great help with some fiddly setup issues.</blockquote>
+              <h4 class="g-font-weight-700 g-font-size-15 g-mb-1">Bastien Rojanawisut</h4>
+              <span class="d-block g-color-text g-font-size-13">Reason: Template Quality</span>
+          </div>
+
+          <div class="js-slide text-center">
+            <blockquote class="g-color-text g-font-size-default g-font-size-18--md g-mb-60">Dear Htmlstream team, I just bought the Unify template some weeks ago. The template is really nice and offers quite a large set of options.</blockquote>
+            <h4 class="g-font-weight-700 g-font-size-15 g-mb-1">Alex Pottorf</h4>
+              <span class="d-block g-color-text g-font-size-13">Reason: Template Quality</span>
+          </div>
+
+          <div class="js-slide text-center">
+            <blockquote class="g-color-text g-font-size-default g-font-size-18--md g-mb-60">New Unify template looks great!. Love the multiple layout examples for Shortcodes and the new Show code Copy code snippet feature is brilliant.</blockquote>
+              <h4 class="g-font-weight-700 g-font-size-15 g-mb-1">Mark Mcmanus</h4>
+              <span class="d-block g-color-text g-font-size-13">Reason: Code Quality</span>
+          </div>
+        </div>
+        <!-- End Carousel -->
+      </div>
+      <!-- End Testimonials -->
+
+      <!-- Contact -->
+      <footer id="contact-section" class="g-pos-rel">
+        <!-- Content -->
+        <div class="g-bg-size-cover g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-pt-120 g-pb-70" style="background-image: url(assets/img-temp/1920x1080/img4.jpg);">
+          <div class="container u-bg-overlay__inner">
+            <div class="row align-items-center">
+              <div class="col-md-4 g-mb-50">
+                <h3 class="h4 g-color-white mb-4">Contact Info</h3>
+
+                <!-- Icon Block -->
+                <div class="media align-items-center mb-4">
+                  <div class="d-flex">
+                    <span class="u-icon-v1 u-icon-size--sm g-color-white mr-2">
+                      <i class="icon-hotel-restaurant-235 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <div class="media-body">
+                    <p class="g-color-white-opacity-0_6 mb-0">5B Streat, City 50987 New Town US</p>
+                  </div>
+                </div>
+                <!-- End Icon Block -->
+
+                <!-- Icon Block -->
+                <div class="media align-items-center mb-4">
+                  <div class="d-flex">
+                    <span class="u-icon-v1 u-icon-size--sm g-color-white mr-2">
+                      <i class="icon-communication-033 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <div class="media-body">
+                    <p class="g-color-white-opacity-0_6 mb-0">+32 (0) 333 444 555</p>
+                  </div>
+                </div>
+                <!-- End Icon Block -->
+
+                <!-- Icon Block -->
+                <div class="media align-items-center g-mb-60">
+                  <div class="d-flex">
+                    <span class="u-icon-v1 u-icon-size--sm g-color-white mr-2">
+                      <i class="icon-communication-062 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <div class="media-body">
+                    <p class="g-color-white-opacity-0_6 mb-0">htmlstream@support.com</p>
+                  </div>
+                </div>
+                <!-- End Icon Block -->
+
+                <!-- Social Icons -->
+                <h3 class="h4 g-color-white">Social Networks</h3>
+
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item g-mx-2">
+                    <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover g-font-size-13 rounded-circle" href="https://www.facebook.com/htmlstream">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item g-mx-2">
+                    <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover g-font-size-13 rounded-circle" href="https://twitter.com/htmlstream">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item g-mx-2">
+                    <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover g-font-size-13 rounded-circle" href="https://github.com/htmlstream">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item g-mx-2">
+                    <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover g-font-size-13 rounded-circle" href="https://dribbble.com/htmlstream">
+                      <i class="fa fa-dribbble"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- End Social Icons -->
+              </div>
+
+              <div class="col-md-8 g-mb-50">
+                <div class="g-brd-around g-brd-white-opacity-0_6 g-px-45 g-py-60">
+                  <div class="row">
+                    <div class="col-md-4 g-mb-30">
+                      <h2 class="h1 g-color-white">Contact Us</h2>
+                    </div>
+
+                    <div class="col-md-8 g-mb-30">
+                      <!-- Contact Form -->
+                      <form>
+                        <div class="mb-3">
+                          <input class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 rounded-0 g-py-13 g-px-0 mb-2" type="text" placeholder="Name">
                         </div>
-                        
-                        <!-- Full Version -->
-                        <div class="hidden-xs">
-                            <?php print $about_description;?>
-                        </div> 
-                    </div>
-                </div>
 
-            </div>
-        </div>
-
-        <!-- About Us Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h1 class="modal-title" id="myModalLabel"><?php print $about_title;?></h1>
-                    </div>
-                    <div class="modal-body description">
-                        <img src="<?php print $about_image;?>" class="about-us-pic pull-right" alt="<?php print $about_tag;?>" title="<?php print $about_tag;?>">
-                        <?php print $about_description;?>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-warning pull-left" data-dismiss="modal"><?php print $TR['close'];?></button>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /. ABOUT US ENDS
-            ========================================================================= -->
-        <!-- MENU STARTS
-            ========================================================================= -->
-        <div id="menus"><p>&nbsp;</p></div>
-        <div class="container-fluid portfolio">
-            <div class="row no-gutter-3">
-                <div class="portfolio-detail text-center col-lg-8 col-lg-offset-2">
-                    
-                    <h1><span><?php print $menu_title;?></span></h1>
-                    <p>&nbsp;</p>
-                    <div class="description"><?php print $menu_description;?></div>
-                    <p>&nbsp;</p>
-                </div>                
-
-                <!-- Picture Starts 1-->
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="picture">
-                        <a class="" href="<?php print base_url("$lg/menus/menu/1");?>" title="<?php print $menu_tag[1];?>">
-                            <?php /*
-                            <img src="<?php print base_url("assets/uploads/$menu1_img");?>" class="img-responsive" alt="<?php print $menu1_title;?>">
-                            */ ?>
-                            <div class="menu-bgs" style="
-                                background: url(<?php print base_url("assets/uploads/$menu1_img");?>) center no-repeat;
-                                background-size: cover;
-                                width:100%;
-                                <?php /* height:400px; */ ?>
-                                margin-bottom: 20px;
-                            "></div>
-                            <!-- Picture Overlay Starts -->                                                 
-                            <div class="text-overlay text-center">
-                                <h1><?php print $menu1_title;?></h1>                            
-                            </div>
-                            <!-- Picture Overlay Ends -->
-                        </a>
-                    </div>
-                </div>
-                <!-- Picture Ends -->
-                <!-- Picture Starts 2-->
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="picture">
-                        <a class="" href="<?php print base_url("$lg/menus/menu/2");?>" title="<?php print $menu_tag[2];?>">    
-                            <?php /*
-                            <img src="<?php print base_url("assets/uploads/$menu2_img");?>" class="img-responsive" alt="<?php print $menu2_title;?>">
-                            */ ?>
-                            <div class="menu-bgs" style="
-                                background: url(<?php print base_url("assets/uploads/$menu2_img");?>) center no-repeat;
-                                background-size: cover;
-                                width:100%;
-                                <?php /* height:400px; */ ?>
-                                margin-bottom: 20px;
-                            "></div>
-                            <!-- Picture Overlay Starts -->                                                 
-                            <div class="text-overlay text-center">
-                                <h1><?php print $menu2_title;?></h1>                            
-                            </div>
-                            <!-- Picture Overlay Ends -->
-                        </a>
-                    </div>
-                </div>
-                <!-- Picture Ends -->
-                <!-- Picture Starts 3-->
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="picture">
-                        <a class="" href="<?php print base_url("$lg/menus/menu/3");?>" title="<?php print $menu_tag[3];?>">   
-                            <?php /*
-                            <img src="<?php print base_url("assets/uploads/$menu3_img");?>" class="img-responsive" alt="<?php print $menu3_title;?>">
-                            */ ?>
-                            <div class="menu-bgs" style="
-                                background: url(<?php print base_url("assets/uploads/$menu3_img");?>) center no-repeat;
-                                background-size: cover;
-                                width:100%;
-                                <?php /* height:400px; */ ?>
-                                margin-bottom: 20px;
-                            "></div>
-                            <!-- Picture Overlay Starts -->                                                 
-                            <div class="text-overlay">
-                                <h1><?php print $menu3_title;?></h1>                            
-                            </div>
-                            <!-- Picture Overlay Ends -->
-                        </a>
-                    </div>
-                </div>
-                <!-- Picture Ends -->
-
-
-
-                <!-- Picture Starts 4-->
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="picture">
-                        <a class="" href="<?php print base_url("$lg/menus/themed");?>" title="<?php print $menu_tag[5];?>"> 
-                            <?php /*
-                            <img src="<?php print base_url("assets/uploads/$menu5_img");?>" class="img-responsive" alt="<?php print $menu5_title;?>">
-                            */ ?>
-                            <div class="menu-bgs" style="
-                                background: url(<?php print base_url("assets/uploads/$menu5_img");?>) center no-repeat;
-                                background-size: cover;
-                                width:100%;
-                                <?php /* height:400px; */ ?>
-                                margin-bottom: 20px;
-                            "></div>
-                            <!-- Picture Overlay Starts -->                                                 
-                            <div class="text-overlay">
-                                <h1><?php print $menu5_title;?></h1>                            
-                            </div>
-                            <!-- Picture Overlay Ends -->
-                        </a>
-                    </div>
-                </div>
-                <!-- Picture Ends -->
-
-
-                <!-- Picture Starts 5-->
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="picture">
-                        <a class="" href="<?php print base_url("$lg/menus/menu/4");?>" title="<?php print $menu_tag[4];?>">
-                            <?php /*
-                            <img src="<?php print base_url("assets/uploads/$menu4_img");?>" class="img-responsive" alt="<?php print $menu4_title;?>">
-                            */ ?>
-                            <div class="menu-bgs" style="
-                                background: url(<?php print base_url("assets/uploads/$menu4_img");?>) center no-repeat;
-                                background-size: cover;
-                                width:100%;
-                                <?php /* height:400px; */ ?>
-                                margin-bottom: 20px;
-                            "></div>
-                            <!-- Picture Overlay Starts -->                                                 
-                            <div class="text-overlay">
-                                <h1><?php print $menu4_title;?></h1>                            
-                            </div>
-                            <!-- Picture Overlay Ends -->
-                        </a>
-                    </div>
-                </div>
-                <!-- Picture Ends -->                
-
-                <!-- Picture Starts 6-->
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="picture">
-                        <a class="" href="<?php print base_url("$lg/menus/menu/8");?>" title="<?php print $menu_tag[8];?>">  
-                            <?php /*
-                            <img src="<?php print base_url("assets/uploads/$menu6_img");?>" class="img-responsive" alt="<?php print $menu6_title;?>">
-                            */ ?>
-                            <div class="menu-bgs" style="
-                                background: url(<?php print base_url("assets/uploads/$menu8_img");?>) center no-repeat;
-                                background-size: cover;
-                                width:100%;
-                                <?php /* height:400px; */ ?>
-                                margin-bottom: 20px;
-                            "></div>
-                            <!-- Picture Overlay Starts -->                                                 
-                            <div class="text-overlay">
-                                <h1><?php print $menu8_title;?></h1>                            
-                            </div>
-                            <!-- Picture Overlay Ends -->
-                        </a>
-                    </div>
-                </div>
-                <!-- Picture Ends -->
-
-
-
-
-
-                <!-- Picture Starts 7-->
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="picture">
-                        <a class="" href="<?php print base_url("$lg/menus/menu/6");?>" title="<?php print $menu_tag[6];?>">  
-                            <?php /*
-                            <img src="<?php print base_url("assets/uploads/$menu6_img");?>" class="img-responsive" alt="<?php print $menu6_title;?>">
-                            */ ?>
-                            <div class="menu-bgs" style="
-                                background: url(<?php print base_url("assets/uploads/$menu6_img");?>) center no-repeat;
-                                background-size: cover;
-                                width:100%;
-                                <?php /* height:400px; */ ?>
-                                margin-bottom: 20px;
-                            "></div>
-                            <!-- Picture Overlay Starts -->                                                 
-                            <div class="text-overlay">
-                                <h1><?php print $menu6_title;?></h1>                            
-                            </div>
-                            <!-- Picture Overlay Ends -->
-                        </a>
-                    </div>
-                </div>
-                <!-- Picture Ends --> 
-
-
-                <!-- Picture Starts 8-->
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="picture">
-                        <a class="" href="<?php print base_url("$lg/menus/classes");?>" title="<?php print $menu_tag[7];?>">  
-                            <?php /*
-                            <img src="<?php print base_url("assets/uploads/$menu6_img");?>" class="img-responsive" alt="<?php print $menu6_title;?>">
-                            */ ?>
-                            <div class="menu-bgs" style="
-                                background: url(<?php print base_url("assets/uploads/$menu7_img");?>) center no-repeat;
-                                background-size: cover;
-                                width:100%;
-                                <?php /* height:400px; */ ?>
-                                margin-bottom: 20px;
-                            "></div>
-                            <!-- Picture Overlay Starts -->                                                 
-                            <div class="text-overlay">
-                                <h1><?php print $menu7_title;?></h1>                            
-                            </div>
-                            <!-- Picture Overlay Ends -->
-                        </a>
-                    </div>
-                </div>
-                <!-- Picture Ends -->                   
-
-
-                                            
-            </div>
-        </div>
-        <!-- /. MENU ENDS
-            ========================================================================= -->
-
-        <!-- OUR TEAM STARTS
-            ========================================================================= -->
-        <div id="testimonials"><p>&nbsp;</p></div>
-        <div class="container our-team">
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <h1><span><?php print $testimonials_title;?></span></h1>
-                    <div class="description"><?php print $testimonials_description;?></div>
-                    <div class="button"><a href="<?php print base_url($lg."/testimonials");?>" class="no-fill-grey"><?php print $TR['explore'];?></a></div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <div class="testimonial-carousel">
-                        <!-- Block Starts -->
-                        <div class="block">
-                            <div class="pic"><img src="<?php print base_url("assets/images/testimonials/roberto.jpg");?>" class="img-responsive" alt="<?php print $testimonial_tag1;?>" title="<?php print $testimonial_tag1;?>"></div>
-                            <div class="detail">
-                                <div class="icon"><img src="<?php print base_url("assets/images/our-team/icon.png");?>" class="img-responsive" alt="The Chef Affairs"></div>
-                                <div class="description">Just a quick email to thank you for sorting such great food when we were in Portugal we were all blown away by your service and will be recommending you to our friends.</div>
-                                <div class="name">Neil</div>
-                                <div class="signature pull-right"><img src="<?php print base_url("assets/images/logos/logo-100x100.png");?>" class="img-responsive" alt="The Chef Affairs"></div>
-                            </div>
+                        <div class="mb-3">
+                          <input class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 rounded-0 g-py-13 g-px-0 mb-2" type="email" placeholder="Email">
                         </div>
-                        <!-- Block Ends -->
-                        <!-- Block Starts -->
-                        <div class="block">
-                            <div class="pic"><img src="<?php print base_url("assets/images/testimonials/arriana.jpg");?>" class="img-responsive" alt="<?php print $testimonial_tag2;?>" title="<?php print $testimonial_tag2;?>"></div>
-                            <div class="detail">
-                                <div class="icon"><img src="<?php print base_url("assets/images/our-team/icon.png");?>" class="img-responsive" alt="The Chef Affairs"></div>
-                                <div class="description">Thank you for making my parents' anniversary so special. The food was amazing, as was the service. A perfect evening!</div>
-                                <div class="name">Laura</div>
-                                <div class="signature pull-right"><img src="<?php print base_url("assets/images/logos/logo-100x100.png");?>" class="img-responsive" alt="The Chef Affairs"></div>
-                            </div>
-                        </div>
-                        <!-- Block Ends -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /. OUR TEAM ENDS
-            ========================================================================= -->
-        
-        <!-- FOOTER STARTS
-            ========================================================================= -->
-        <div id="contact"><p>&nbsp;</p></div>
-        <footer class="parallax-2">
-            
-            <!-- Contact Info Starts -->
-            <?php include("inc.contact.php"); ?>
-            <!-- Contact Info Ends -->
-            
-            <!-- Copyright Starts -->
-            <?php include("inc.copyright.php"); ?>
-            <!-- Copyright Starts -->
-        </footer>
-        <!-- /. FOOTER ENDS
-            ========================================================================= -->
-        <!-- TO TOP STARTS
-            ========================================================================= -->
-        <a href="#" class="scrollup">Scroll</a>      
-        <!-- /. TO TOP ENDS
-            ========================================================================= -->
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <!--
-        <script src="<?php print base_url("assets/js/bootstrap.min.js");?>"></script>
-        -->
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- Menu -->       
-        <script src="<?php print base_url("assets/js/overlay-menu/js/snap.svg-min.js");?>"></script>
-        <script src="<?php print base_url("assets/js/overlay-menu/js/modernizr.custom.js");?>"></script>
-        <script src="<?php print base_url("assets/js/overlay-menu/js/classie.js");?>"></script>
-        <script src="<?php print base_url("assets/js/overlay-menu/js/overlay-main.js");?>"></script>
-        <!-- REVOLUTION JS FILES -->
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/jquery.themepunch.tools.min.js");?>"></script>
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/jquery.themepunch.revolution.min.js");?>"></script>
-        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
-            (Load Extensions only on Local File Systems !  
-            The following part can be removed on Server for On Demand Loading) -->  
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/extensions/revolution.extension.actions.min.js");?>"></script>
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/extensions/revolution.extension.carousel.min.js");?>"></script>
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/extensions/revolution.extension.kenburn.min.js");?>"></script>
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/extensions/revolution.extension.layeranimation.min.js");?>"></script>
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/extensions/revolution.extension.migration.min.js");?>"></script>
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/extensions/revolution.extension.navigation.min.js");?>"></script>
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/extensions/revolution.extension.parallax.min.js");?>"></script>
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/extensions/revolution.extension.slideanims.min.js");?>"></script>
-        <script type="text/javascript" src="<?php print base_url("assets/revolution/js/extensions/revolution.extension.video.min.js");?>"></script>
-        <script type="text/javascript">
-            var tpj=jQuery;                 
-            var revapi112;
-            tpj(document).ready(function() {
-                if(tpj("#rev_slider_204_1").revolution == undefined){
-                    revslider_showDoubleJqueryError("#rev_slider_204_1");
-                }else{
-                    revapi112 = tpj("#rev_slider_204_1").show().revolution({
-                        sliderType:"standard",
-                        jsFileLocation:"<?php print base_url("assets/revolution/js");?>/",
-                        sliderLayout:"fullscreen",
-                        dottedOverlay:"none",
-                        delay:6000,
-                        navigation: {
-                            keyboardNavigation:"off",
-                            keyboard_direction: "horizontal",
-                            mouseScrollNavigation:"off",
-                            onHoverStop:"off",
-                            touch:{
-                                touchenabled:"on",
-                                swipe_threshold: 75,
-                                swipe_min_touches: 1,
-                                swipe_direction: "horizontal",
-                                drag_block_vertical: false
-                            }
-                            ,
-                            arrows: {
-                                        style:"zeus",
-                                        enable:true,
-                                        hide_onmobile:false,
-                                        hide_under:600,
-                                        hide_onleave:true,
-                                        hide_delay:200,
-                                        hide_delay_mobile:1200,
-                                        tmp:'<div class="tp-title-wrap">    <div class="tp-arr-imgholder"></div> </div>',
-                                        left: {
-                                            h_align:"left",
-                                            v_align:"center",
-                                            h_offset:30,
-                                            v_offset:0
-                                        },
-                                        right: {
-                                            h_align:"right",
-                                            v_align:"center",
-                                            h_offset:30,
-                                            v_offset:0
-                                        }
-                                    },
-                            bullets: {
-                                enable:true,
-                                hide_onmobile:false,                                
-                                style:"hermes",
-                                hide_onleave:false,
-                                hide_delay:200,
-                                hide_delay_mobile:1200,
-                                direction:"horizontal",
-                                h_align:"center",
-                                v_align:"bottom",
-                                h_offset:0,
-                                v_offset:50,
-                                space:20,
-                                tmp:''
-                            }
-                        },
-                        viewPort: {
-                            enable:true,
-                            outof:"pause",
-                            visible_area:"80%"
-                        },
-                        responsiveLevels:[1240,1024,778,480],
-                        gridwidth:[1240,1024,778,480],
-                        gridheight:[700,600,500,400],
-                        lazyType:"none",
-                        parallax: {
-                            type:"mouse",
-                            origo:"slidercenter",
-                            speed:2000,
-                            levels:[2,3,4,5,6,7,12,16,10,50],
-                        },
-                        shadow:0,
-                        spinner:"off",
-                        stopLoop:"off",
-                        stopAfterLoops:-1,
-                        stopAtSlide:-1,
-                        shuffle:"off",
-                        autoHeight:"off",
-                        hideThumbsOnMobile:"off",
-                        hideSliderAtLimit:0,
-                        hideCaptionAtLimit:0,
-                        hideAllCaptionAtLilmit:0,
-                        debugMode:false,
-                        fallbacks: {
-                            simplifyAll:"off",
-                            nextSlideOnWindowFocus:"off",
-                            disableFocusListener:false,
-                        }
-                    });
-                }
-            }); /*ready*/
-        </script>
-        <!-- Parallax -->
-        <script type="text/javascript" src="<?php print base_url("assets/js/parallax/jquery.parallax-1.1.3.js");?>"></script> 
-        <script type="text/javascript" src="<?php print base_url("assets/js/parallax/jquery.localscroll-1.2.7-min.js");?>"></script> 
-        <script type="text/javascript" src="<?php print base_url("assets/js/parallax/jquery.scrollTo-1.4.2-min.js");?>"></script>
-        <!-- Retina --> 
-        <script type="text/javascript" src="<?php print base_url("assets/js/retina/retina.js");?>"></script> 
-        <!-- Owl Carousel --> 
-        <script type="text/javascript" src="<?php print base_url("assets/js/owl-carousel/owl.carousel.js");?>"></script>
-        <!-- FitVids --> 
-        <script type="text/javascript" src="<?php print base_url("assets/js/fitvids/jquery.fitvids.js");?>"></script>
-        <!-- Magnific Popup core JS file -->
-        <script type="text/javascript" src="<?php print base_url("assets/js/magnific-popup/jquery.magnific-popup.js");?>"></script>   
-        <!-- Counter Up --> 
-        <!--
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>      
-        -->
-<script type="text/javascript">
-// Generated by CoffeeScript 1.6.2
-/*
-jQuery Waypoints - v2.0.3
-Copyright (c) 2011-2013 Caleb Troughton
-Dual licensed under the MIT license and GPL license.
-https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
-*/
-(function(){var t=[].indexOf||function(t){for(var e=0,n=this.length;e<n;e++){if(e in this&&this[e]===t)return e}return-1},e=[].slice;(function(t,e){if(typeof define==="function"&&define.amd){return define("waypoints",["jquery"],function(n){return e(n,t)})}else{return e(t.jQuery,t)}})(this,function(n,r){var i,o,l,s,f,u,a,c,h,d,p,y,v,w,g,m;i=n(r);c=t.call(r,"ontouchstart")>=0;s={horizontal:{},vertical:{}};f=1;a={};u="waypoints-context-id";p="resize.waypoints";y="scroll.waypoints";v=1;w="waypoints-waypoint-ids";g="waypoint";m="waypoints";o=function(){function t(t){var e=this;this.$element=t;this.element=t[0];this.didResize=false;this.didScroll=false;this.id="context"+f++;this.oldScroll={x:t.scrollLeft(),y:t.scrollTop()};this.waypoints={horizontal:{},vertical:{}};t.data(u,this.id);a[this.id]=this;t.bind(y,function(){var t;if(!(e.didScroll||c)){e.didScroll=true;t=function(){e.doScroll();return e.didScroll=false};return r.setTimeout(t,n[m].settings.scrollThrottle)}});t.bind(p,function(){var t;if(!e.didResize){e.didResize=true;t=function(){n[m]("refresh");return e.didResize=false};return r.setTimeout(t,n[m].settings.resizeThrottle)}})}t.prototype.doScroll=function(){var t,e=this;t={horizontal:{newScroll:this.$element.scrollLeft(),oldScroll:this.oldScroll.x,forward:"right",backward:"left"},vertical:{newScroll:this.$element.scrollTop(),oldScroll:this.oldScroll.y,forward:"down",backward:"up"}};if(c&&(!t.vertical.oldScroll||!t.vertical.newScroll)){n[m]("refresh")}n.each(t,function(t,r){var i,o,l;l=[];o=r.newScroll>r.oldScroll;i=o?r.forward:r.backward;n.each(e.waypoints[t],function(t,e){var n,i;if(r.oldScroll<(n=e.offset)&&n<=r.newScroll){return l.push(e)}else if(r.newScroll<(i=e.offset)&&i<=r.oldScroll){return l.push(e)}});l.sort(function(t,e){return t.offset-e.offset});if(!o){l.reverse()}return n.each(l,function(t,e){if(e.options.continuous||t===l.length-1){return e.trigger([i])}})});return this.oldScroll={x:t.horizontal.newScroll,y:t.vertical.newScroll}};t.prototype.refresh=function(){var t,e,r,i=this;r=n.isWindow(this.element);e=this.$element.offset();this.doScroll();t={horizontal:{contextOffset:r?0:e.left,contextScroll:r?0:this.oldScroll.x,contextDimension:this.$element.width(),oldScroll:this.oldScroll.x,forward:"right",backward:"left",offsetProp:"left"},vertical:{contextOffset:r?0:e.top,contextScroll:r?0:this.oldScroll.y,contextDimension:r?n[m]("viewportHeight"):this.$element.height(),oldScroll:this.oldScroll.y,forward:"down",backward:"up",offsetProp:"top"}};return n.each(t,function(t,e){return n.each(i.waypoints[t],function(t,r){var i,o,l,s,f;i=r.options.offset;l=r.offset;o=n.isWindow(r.element)?0:r.$element.offset()[e.offsetProp];if(n.isFunction(i)){i=i.apply(r.element)}else if(typeof i==="string"){i=parseFloat(i);if(r.options.offset.indexOf("%")>-1){i=Math.ceil(e.contextDimension*i/100)}}r.offset=o-e.contextOffset+e.contextScroll-i;if(r.options.onlyOnScroll&&l!=null||!r.enabled){return}if(l!==null&&l<(s=e.oldScroll)&&s<=r.offset){return r.trigger([e.backward])}else if(l!==null&&l>(f=e.oldScroll)&&f>=r.offset){return r.trigger([e.forward])}else if(l===null&&e.oldScroll>=r.offset){return r.trigger([e.forward])}})})};t.prototype.checkEmpty=function(){if(n.isEmptyObject(this.waypoints.horizontal)&&n.isEmptyObject(this.waypoints.vertical)){this.$element.unbind([p,y].join(" "));return delete a[this.id]}};return t}();l=function(){function t(t,e,r){var i,o;r=n.extend({},n.fn[g].defaults,r);if(r.offset==="bottom-in-view"){r.offset=function(){var t;t=n[m]("viewportHeight");if(!n.isWindow(e.element)){t=e.$element.height()}return t-n(this).outerHeight()}}this.$element=t;this.element=t[0];this.axis=r.horizontal?"horizontal":"vertical";this.callback=r.handler;this.context=e;this.enabled=r.enabled;this.id="waypoints"+v++;this.offset=null;this.options=r;e.waypoints[this.axis][this.id]=this;s[this.axis][this.id]=this;i=(o=t.data(w))!=null?o:[];i.push(this.id);t.data(w,i)}t.prototype.trigger=function(t){if(!this.enabled){return}if(this.callback!=null){this.callback.apply(this.element,t)}if(this.options.triggerOnce){return this.destroy()}};t.prototype.disable=function(){return this.enabled=false};t.prototype.enable=function(){this.context.refresh();return this.enabled=true};t.prototype.destroy=function(){delete s[this.axis][this.id];delete this.context.waypoints[this.axis][this.id];return this.context.checkEmpty()};t.getWaypointsByElement=function(t){var e,r;r=n(t).data(w);if(!r){return[]}e=n.extend({},s.horizontal,s.vertical);return n.map(r,function(t){return e[t]})};return t}();d={init:function(t,e){var r;if(e==null){e={}}if((r=e.handler)==null){e.handler=t}this.each(function(){var t,r,i,s;t=n(this);i=(s=e.context)!=null?s:n.fn[g].defaults.context;if(!n.isWindow(i)){i=t.closest(i)}i=n(i);r=a[i.data(u)];if(!r){r=new o(i)}return new l(t,r,e)});n[m]("refresh");return this},disable:function(){return d._invoke(this,"disable")},enable:function(){return d._invoke(this,"enable")},destroy:function(){return d._invoke(this,"destroy")},prev:function(t,e){return d._traverse.call(this,t,e,function(t,e,n){if(e>0){return t.push(n[e-1])}})},next:function(t,e){return d._traverse.call(this,t,e,function(t,e,n){if(e<n.length-1){return t.push(n[e+1])}})},_traverse:function(t,e,i){var o,l;if(t==null){t="vertical"}if(e==null){e=r}l=h.aggregate(e);o=[];this.each(function(){var e;e=n.inArray(this,l[t]);return i(o,e,l[t])});return this.pushStack(o)},_invoke:function(t,e){t.each(function(){var t;t=l.getWaypointsByElement(this);return n.each(t,function(t,n){n[e]();return true})});return this}};n.fn[g]=function(){var t,r;r=arguments[0],t=2<=arguments.length?e.call(arguments,1):[];if(d[r]){return d[r].apply(this,t)}else if(n.isFunction(r)){return d.init.apply(this,arguments)}else if(n.isPlainObject(r)){return d.init.apply(this,[null,r])}else if(!r){return n.error("jQuery Waypoints needs a callback function or handler option.")}else{return n.error("The "+r+" method does not exist in jQuery Waypoints.")}};n.fn[g].defaults={context:r,continuous:true,enabled:true,horizontal:false,offset:0,triggerOnce:false};h={refresh:function(){return n.each(a,function(t,e){return e.refresh()})},viewportHeight:function(){var t;return(t=r.innerHeight)!=null?t:i.height()},aggregate:function(t){var e,r,i;e=s;if(t){e=(i=a[n(t).data(u)])!=null?i.waypoints:void 0}if(!e){return[]}r={horizontal:[],vertical:[]};n.each(r,function(t,i){n.each(e[t],function(t,e){return i.push(e)});i.sort(function(t,e){return t.offset-e.offset});r[t]=n.map(i,function(t){return t.element});return r[t]=n.unique(r[t])});return r},above:function(t){if(t==null){t=r}return h._filter(t,"vertical",function(t,e){return e.offset<=t.oldScroll.y})},below:function(t){if(t==null){t=r}return h._filter(t,"vertical",function(t,e){return e.offset>t.oldScroll.y})},left:function(t){if(t==null){t=r}return h._filter(t,"horizontal",function(t,e){return e.offset<=t.oldScroll.x})},right:function(t){if(t==null){t=r}return h._filter(t,"horizontal",function(t,e){return e.offset>t.oldScroll.x})},enable:function(){return h._invoke("enable")},disable:function(){return h._invoke("disable")},destroy:function(){return h._invoke("destroy")},extendFn:function(t,e){return d[t]=e},_invoke:function(t){var e;e=n.extend({},s.vertical,s.horizontal);return n.each(e,function(e,n){n[t]();return true})},_filter:function(t,e,r){var i,o;i=a[n(t).data(u)];if(!i){return[]}o=[];n.each(i.waypoints[e],function(t,e){if(r(i,e)){return o.push(e)}});o.sort(function(t,e){return t.offset-e.offset});return n.map(o,function(t){return t.element})}};n[m]=function(){var t,n;n=arguments[0],t=2<=arguments.length?e.call(arguments,1):[];if(h[n]){return h[n].apply(null,t)}else{return h.aggregate.call(null,n)}};n[m].settings={resizeThrottle:100,scrollThrottle:30};return i.load(function(){return n[m]("refresh")})})}).call(this);            
-        </script>        
-        <script src="<?php print base_url("assets/js/counterup/jquery.counterup.min.js");?>"></script>
-        <!-- AJAX Contact Form -->          
-        <script type="text/javascript" src="<?php print base_url("assets/js/contact/contact-form.js");?>"></script>
-        <!-- Custom JS -->
-        <script src="<?php print base_url("assets/js/custom/custom.js");?>"></script>
 
-        <?php include("inc.google-analytics.php"); ?>
-    </body>
-</html>
+                        <div class="mb-4">
+                          <textarea class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 g-resize-none rounded-0 g-py-13 g-px-0 mb-5" rows="5" placeholder="Message"></textarea>
+                        </div>
+
+                        <button class="btn u-btn-primary g-bg-secondary g-color-primary g-color-white--hover g-bg-primary--hover g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" type="submit" role="button">Send Message</button>
+                      </form>
+                      <!-- End Contact Form -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Content -->
+
+        <!-- Go To Top -->
+        <a class="js-go-to text-center g-color-main g-color-primary--hover g-left-50x g-ml-minus-100" href="#!"
+           data-type="absolute"
+           data-position='{
+             "bottom": 65
+           }'
+           data-offset-top="400"
+           data-compensation="#js-header"
+           data-show-effect="fadeInUp">
+          <svg version="1.1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="208px" height="50px">
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M111.042,0h-0.085C81.962,0.042,50.96,42.999,6,42.999c-6,0-6,0-6,0v1h214v-1v-0.015C169.917,42.349,139.492,0.042,111.042,0z"/>
+          </svg>
+          <i class="g-font-size-20 g-pos-abs g-bottom-20 g-left-50x g-ml-2 fa fa-angle-double-up"></i>
+        </a>
+        <!-- End Go To Top -->
+
+        <!-- Copyright -->
+        <div class="container text-center g-py-30">
+          <p class="g-font-size-13 mb-0">&#169; 2017 Htmlstream. All Rights Reserved.</p>
+        </div>
+        <!-- End Copyright -->
+      </footer>
+      <!-- End Contact -->
+    </main>
+
+
+
+<?php
+
+# Footer
+include("_footer.php"); 
+
+?>
