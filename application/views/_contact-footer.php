@@ -89,15 +89,15 @@
                         </div>
 
                         <div class="row">
-                          <div class="col-md-6 mb-3 g-color-white">
-                            <p class="g-color-white">Do you want a reply?</p>
+                          <div class="col-md-6 mb-3 g-color-gray-light-v5">
+                            <p class="g-color-gray-light-v5">Do you want a reply?</p>
                             <label for="reply_yes">Yes</label>
                             <input type="radio" name="reply" value="yes" id="reply_yes" checked="checked">
                             <label for="reply_no">No</label>
                             <input type="radio" name="reply" value="no" id="reply_no">
                           </div>                          
-                          <div class="col-md-6 mb-3 g-color-white">
-                            <p class="g-color-white">Have you eaten?</p>
+                          <div class="col-md-6 mb-3 g-color-gray-light-v5">
+                            <p class="g-color-gray-light-v5">Have you eaten?</p>
                             <label for="eaten_yes">Yes</label>
                             <input type="radio" name="eaten" value="yes" id="eaten_yes" checked="checked">
                             <label for="eaten_no">No</label>
@@ -106,7 +106,7 @@
                         </div>
 
                         <div class="mb-3">                          
-                          <input type="checkbox" name="love" id="love" value="love"> <label for="love" class="g-color-white">Sent with love</label>
+                          <input type="checkbox" name="love" id="love" value="love"> <label for="love" class="g-color-gray-light-v5">Sent with love</label>
                         </div>
 
                         <div class="mb-3">
