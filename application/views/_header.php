@@ -43,4 +43,8 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="<?php print base_url('assets/css/custom.css');?>">
+
+    <!-- Recaptcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    
   </head>

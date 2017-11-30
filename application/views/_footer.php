@@ -48,6 +48,12 @@
     <!-- JS Plugins Init. -->
     <script>
       $(document).on('ready', function () {
+
+        //  Validate Contact Form  
+        $('#contactButton').on('click', function() {
+          validateContactForm();
+        })
+
         // initialization of carousel
         $.HSCore.components.HSCarousel.init('.js-carousel');
 

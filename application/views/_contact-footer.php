@@ -44,36 +44,7 @@
                     <p class="g-color-white-opacity-0_6 mb-0">x17119847@student.ncirl.ie</p>
                   </div>
                 </div>
-                <!-- End Icon Block -->
-
-                <?php /*
-                <!-- Social Icons -->
-                <h3 class="h4 g-color-white">Social Networks</h3>
-
-                <ul class="list-inline mb-0">
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover g-font-size-13 rounded-circle" href="https://www.facebook.com/htmlstream">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover g-font-size-13 rounded-circle" href="https://twitter.com/htmlstream">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover g-font-size-13 rounded-circle" href="https://github.com/htmlstream">
-                      <i class="fa fa-github"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item g-mx-2">
-                    <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover g-font-size-13 rounded-circle" href="https://dribbble.com/htmlstream">
-                      <i class="fa fa-dribbble"></i>
-                    </a>
-                  </li>
-                </ul>
-                <!-- End Social Icons -->
-                */ ?>
+                <!-- End Icon Block -->                
 
               </div>
 
@@ -86,23 +57,68 @@
 
                     <div class="col-md-8 g-mb-30">
                       <!-- Contact Form -->
-                      <form>
+                      <form id="contactForm" action="<?php print base_url($lg."/contact/submit");?>" method="post" target="iframe">
 
                         <div class="mb-3">
-                          <input class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 rounded-0 g-py-13 g-px-0 mb-2" type="text" placeholder="Name">
+                          <select id="mood" name="mood" class="col-md-12 form-control g-brd-none g-brd-bottom g-brd-white g-bg-transparent rounded-0 g-px-0 mb-2 g-color-gray-dark-v5">
+                            <option value="" selected="">Please select your mood</option>
+                            <option value="happy">Happy</option>
+                            <option value="sad">Sad</option>
+                            <option value="angry">Angry</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="frustrated">Frustrated</option>
+                          </select>
+                        </div>
+
+                        <div class="row">
+                          <div class="mb-3 col-md-6">
+                            <input class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 rounded-0 g-py-13 g-px-0 mb-2" type="text" placeholder="First Name" name="first_name" id="first_name">
+                          </div>
+
+                          <div class="mb-3 col-md-6">
+                            <input class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 rounded-0 g-py-13 g-px-0 mb-2" type="text" placeholder="Last Name" name="last_name" id="last_name">
+                          </div>
                         </div>
 
                         <div class="mb-3">
-                          <input class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 rounded-0 g-py-13 g-px-0 mb-2" type="email" placeholder="Email">
+                          <input class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 rounded-0 g-py-13 g-px-0 mb-2" type="email" placeholder="Email" name="mail" id="mail">
                         </div>
 
                         <div class="mb-4">
-                          <textarea class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 g-resize-none rounded-0 g-py-13 g-px-0 mb-5" rows="5" placeholder="Message"></textarea>
+                          <textarea class="form-control g-brd-none g-brd-bottom g-brd-white g-brd-primary--focus g-color-white g-bg-transparent g-placeholder-gray-light-v5 g-resize-none rounded-0 g-py-13 g-px-0 mb-5" rows="5" placeholder="Message" name="message" id="message"></textarea>
                         </div>
 
-                        <button class="btn u-btn-primary g-bg-secondary g-color-primary g-color-white--hover g-bg-primary--hover g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" type="submit" role="button">Send Message</button>
+                        <div class="row">
+                          <div class="col-md-6 mb-3 g-color-white">
+                            <p class="g-color-white">Do you want a reply?</p>
+                            <label for="reply_yes">Yes</label>
+                            <input type="radio" name="reply" value="yes" id="reply_yes" checked="checked">
+                            <label for="reply_no">No</label>
+                            <input type="radio" name="reply" value="no" id="reply_no">
+                          </div>                          
+                          <div class="col-md-6 mb-3 g-color-white">
+                            <p class="g-color-white">Have you eaten?</p>
+                            <label for="eaten_yes">Yes</label>
+                            <input type="radio" name="eaten" value="yes" id="eaten_yes" checked="checked">
+                            <label for="eaten_no">No</label>
+                            <input type="radio" name="eaten" value="no" id="eaten_no">
+                          </div>                          
+                        </div>
+
+                        <div class="mb-3">                          
+                          <input type="checkbox" name="love" id="love" value="love"> <label for="love" class="g-color-white">Sent with love</label>
+                        </div>
+
+                        <div class="mb-3">
+                          <div class="g-recaptcha" data-sitekey="6Le2mCkTAAAAADZRfFcgK-o1NuMmyA5bIxUxCaRt"></div>
+                        </div>
+                        
+                        <button class="btn u-btn-primary g-bg-secondary g-color-primary g-color-white--hover g-bg-primary--hover g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" type="button" role="button" id="contactButton">Send Message</button>
+
                       </form>
+                      <iframe name="iframe" scrolling="no" frameborder="0" width="0" height="0" src=""></iframe>
                       <!-- End Contact Form -->
+
                     </div>
                   </div>
                 </div>
@@ -134,4 +150,4 @@
         </div>
         <!-- End Copyright -->
       </footer>
-    
+
