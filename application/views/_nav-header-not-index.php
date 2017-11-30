@@ -29,6 +29,9 @@
                     <a href="<?php print base_url($lg."/home#category-section");?>" class="nav-link p-0">Categories</a>
                   </li>                  
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="<?php print base_url($lg."/recipes");?>" class="nav-link p-0 <?php if(PAGE=='recipes') print 'active';?>">Recipes</a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
                     <a href="<?php print base_url($lg."/contact");?>" class="nav-link p-0 <?php if(PAGE=='contact') print 'active';?>">Contact</a>
                   </li>
                   <li class="nav-item g-ml-15--lg">

@@ -284,7 +284,7 @@
         </div>
 
         <div class="text-center">
-          <a class="btn u-btn-primary g-bg-secondary g-color-primary g-color-white--hover g-bg-primary--hover g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" href="#!">More Recipes</a>
+          <a class="btn u-btn-outline-primary g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" href="<?php print base_url($lg."/recipes");?>">More Recipes</a>
         </div>
 
       </div>

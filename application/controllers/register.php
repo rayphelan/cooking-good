@@ -2,10 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-define('PAGE','login');
+define('PAGE','register');
 
 
-class Login extends CI_Controller {
+class Register extends CI_Controller {
   
     public function __construct() {
 
@@ -14,11 +14,11 @@ class Login extends CI_Controller {
 	}
 
 
-	//	Login Page
+	//	Register Page
 	public function index() {
 		
 		$data['lg'] = $this->lang->lang();
-		$this->load->view('login',$data);
+		$this->load->view('register',$data);
 
 	}
 

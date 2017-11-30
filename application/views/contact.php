@@ -107,7 +107,7 @@ include("_header.php");
                 </div>
 
                 <div class="col-md-12 form-group g-mb-40">
-                  <select id="mood" name="mood" class="col-md-12 form-control rounded-3 mb-2 g-color-gray-dark-v2 g-brd-gray-light-v4 g-brd-primary--hover">
+                  <select name="mood" id="mood" class="js-custom-select u-select-v1 g-brd-gray-light-v3 g-color-gray-dark-v5 rounded g-py-12" style="width: 100%;">
                     <option value="" selected="">How are you feeling?</option>
                     <option value="happy">Happy</option>
                     <option value="sad">Sad</option>

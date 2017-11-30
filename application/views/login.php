@@ -47,7 +47,7 @@ include("_header.php");
                     <span class="input-group-addon g-width-45 g-brd-gray-light-v3 g-color-gray-dark-v5">
                       <i class="icon-finance-067 u-line-icon-pro"></i>
                     </span>
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="email" placeholder="Email Adress">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="email" placeholder="Email Address">
                   </div>
                 </div>
 

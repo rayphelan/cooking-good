@@ -3,7 +3,7 @@
           <!-- Heading -->
           <div class="g-max-width-550 text-center mx-auto g-mb-70">
             <h2 class="text-uppercase g-color-main-light-v1 g-font-weight-600 g-font-size-13 g-letter-spacing-2 mb-4">Main Categories</h2>
-            <h2 class="h3 mb-5">These are our main categories, but we have many more available.</h2>
+            <h2 class="h3 mb-5">These are our top performing categories, but we have many more available.</h2>
           </div>
           <!-- End Heading -->
 
@@ -106,7 +106,7 @@
           </div>
 
           <div class="text-center">
-            <a class="btn u-btn-outline-primary g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" href="">View all Categories</a>
+            <a class="btn u-btn-outline-primary g-font-weight-600 g-font-size-12 g-rounded-30 g-py-15 g-px-35" href="<?php print base_url($lg."/categories");?>">More Categories</a>
           </div>
 
         </div>
