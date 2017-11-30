@@ -1,6 +1,6 @@
 <footer id="contact-section" class="g-pos-rel">
         <!-- Content -->
-        <div class="g-bg-size-cover g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-pt-120 g-pb-70" style="background-image: url(<?php print base_url('assets/images/parallax/2.jpg');?>);">
+        <div class="g-bg-size-cover g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-pt-120 g-pb-70" style="background-image: url(<?php print base_url('assets/images/parallax/4.jpg');?>);">
           <div class="container u-bg-overlay__inner">
             <div class="row align-items-center">
               <div class="col-md-4 g-mb-50">
