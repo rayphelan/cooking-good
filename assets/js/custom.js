@@ -8,14 +8,14 @@ function validateEmail(email) {
 //  Validate Contact Form
 function validateContactForm() {
 
-  var mood = $('#mood').val();
   var email = $('#mail').val();
   var first_name = $('#first_name').val();
   var last_name = $('#last_name').val();
   var message = $('#message').val();
+  var phone = $('#phone').val();
 
-  if(!mood || !email || !first_name || !last_name || !message) {
-    alert('Please insert your mood, first and last name, email and message. Thank you.');
+  if(!email || !first_name || !last_name || !message) {
+    alert('Please insert your first and last name, email and message. Thank you.');
     return false;
   }
   else {

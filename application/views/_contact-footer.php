@@ -89,15 +89,15 @@
                         </div>
 
                         <div class="row">
-                          <div class="col-md-6 mb-3 g-color-gray-light-v5">
-                            <p class="g-color-gray-light-v5">Do you want a reply?</p>
+                          <div class="col-md-6 mb-3 g-color-gray-dark-v5">
+                            <p class="g-color-gray-dark-v5">Do you want a reply?</p>
                             <label for="reply_yes">Yes</label>
                             <input type="radio" name="reply" value="yes" id="reply_yes" checked="checked">
                             <label for="reply_no">No</label>
                             <input type="radio" name="reply" value="no" id="reply_no">
                           </div>                          
-                          <div class="col-md-6 mb-3 g-color-gray-light-v5">
-                            <p class="g-color-gray-light-v5">Have you eaten?</p>
+                          <div class="col-md-6 mb-3 g-color-gray-dark-v5">
+                            <p class="g-color-gray-dark-v5">Have you eaten?</p>
                             <label for="eaten_yes">Yes</label>
                             <input type="radio" name="eaten" value="yes" id="eaten_yes" checked="checked">
                             <label for="eaten_no">No</label>
@@ -105,11 +105,18 @@
                           </div>                          
                         </div>
 
-                        <div class="mb-3">                          
-                          <input type="checkbox" name="love" id="love" value="love"> <label for="love" class="g-color-gray-light-v5">Sent with love</label>
+                        <div class="mb-3">              
+                          <label class="form-check-inline u-check g-color-gray-dark-v5 g-font-size-13 g-pl-25 mb-0">
+                            <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" type="checkbox" name="love" id="love" value="love">
+                            <span class="d-block u-check-icon-checkbox-v6 g-absolute-centered--y g-left-0">
+                              <i class="fa" data-check-icon="&#xf00c"></i>
+                            </span>
+                            Sent with love
+                          </label>                          
                         </div>
 
                         <div class="mb-3">
+                          <p>&nbsp;</p>
                           <div class="g-recaptcha" data-sitekey="6Le2mCkTAAAAADZRfFcgK-o1NuMmyA5bIxUxCaRt"></div>
                         </div>
                         

@@ -27,6 +27,10 @@
     <td align="left"><?php print $mail;?></td>
   </tr>
   <tr>
+    <td align="left" bgcolor="#f4f4f4">Phone</td>
+    <td align="left"><?php print $phone;?></td>
+  </tr>  
+  <tr>
     <td align="left" valign="top" bgcolor="#f4f4f4">Message</td>
     <td align="left" valign="top"><?php print $message;?></td>
   </tr>

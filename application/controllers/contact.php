@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+define('PAGE','contact');
 
 class Contact extends CI_Controller {
   
@@ -8,6 +9,21 @@ class Contact extends CI_Controller {
 		parent::__construct();		
 						
 	}
+
+
+	//	Index Page
+	public function index() {
+		$data['lg'] = $this->lang->lang();
+		$this->load->view('contact',$data);
+	}
+
+
+	//	Thank you Page
+	public function thankyou() {
+		$data['lg'] = $this->lang->lang();
+		$this->load->view('contact-thank-you',$data);
+	}
+
 
 
 	//	Submit Contact Form
@@ -19,7 +35,7 @@ class Contact extends CI_Controller {
 
 
 		//	 Vars
-		$vars = ['mood','first_name','last_name','mail','message','reply','eaten','love'];
+		$vars = ['mood','first_name','last_name','mail','message','reply','eaten','love','phone'];
 		foreach($vars as $v) {
 			$this->$v = $this->security->xss_clean(trim($this->vars[$v]));
 			$this->data[$v] = $this->$v;
@@ -42,6 +58,8 @@ class Contact extends CI_Controller {
 				window.parent.alert('Unauthorized by Recaptcha');
 			</script>
 			<?php
+			
+			redirect($lg.'/contact','refresh');
 			return false;
 		}
 
@@ -54,26 +72,8 @@ class Contact extends CI_Controller {
 		$result = $this->send();
 
 
-		//	Confirm send
-		if($result) {
-			if($lg == 'en') $msg = "Thank you. Your message was sent.";
-			else $msg = "Obrigado. A sua mensagem foi enviada";
-			?>
-			<script type="text/javascript">
-				window.parent.alert('<?php print $msg;?>');
-				window.parent.location.href = '<?php print base_url($lg."/home?time=".time()."#home-section");?>';
-			</script>
-			<?php
-		}
-		else {
-			if($lg == 'en') $msg = "There was a problem sending the email. Please contact by phone.";
-			else $msg = "Houve um problema a enviar o email. Por favor contacte por telefone.";
-			?>
-			<script type="text/javascript">
-				window.parent.alert('<?php print $msg;?>');
-			</script>
-			<?php
-		}
+		//	Thank you
+		redirect($lg.'/contact/thankyou', 'refresh');
 
 	}
 

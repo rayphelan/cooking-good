@@ -8,7 +8,7 @@
               
 
               <!-- Logo -->
-              <a href="#!" class="js-go-to navbar-brand u-header__logo"
+              <a href="<?php print base_url($lg."/home");?>" class="navbar-brand u-header__logo"
                  data-type="static">
                 <img class="u-header__logo-img u-header__logo-img--main g-width-90" src="<?php print base_url('assets/images/logo/logo.png');?>" alt="<?php print WEBSITE_TITLE;?>">
                 <img class="u-header__logo-img g-width-90" src="<?php print base_url('assets/images/logo/logo-dark.png');?>" alt="<?php print WEBSITE_TITLE;?>">
@@ -20,22 +20,22 @@
               <div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar">
                 <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-letter-spacing-1 g-font-size-12 g-pt-20 g-pt-0--lg ml-auto">
                   <li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#home-section" class="nav-link p-0">Home <span class="sr-only">(current)</span></a>
+                    <a href="<?php print base_url($lg."/home#home-section");?>" class="nav-link p-0">Home</a>
                   </li>                  
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#selected-recipes" class="nav-link p-0">Highlights</a>
+                    <a href="<?php print base_url($lg."/home#selected-recipes");?>" class="nav-link p-0">Highlights</a>
                   </li>
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#category-section" class="nav-link p-0">Categories</a>
+                    <a href="<?php print base_url($lg."/home#category-section");?>" class="nav-link p-0">Categories</a>
                   </li>                  
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="<?php print base_url($lg."/contact");?>" class="nav-link p-0">Contact</a>
+                    <a href="<?php print base_url($lg."/contact");?>" class="nav-link p-0 <?php if(PAGE=='contact') print 'active';?>">Contact</a>
                   </li>
                   <li class="nav-item g-ml-15--lg">
-                    <a href="<?php print base_url($lg."/login");?>" class="nav-link p-0">Log in</a>
+                    <a href="<?php print base_url($lg."/login");?>" class="nav-link p-0 <?php if(PAGE=='login') print 'active';?>">Log in</a>
                   </li>
                   <li class="nav-item g-ml-15--lg">
-                    <a href="<?php print base_url($lg."/register");?>" class="nav-link p-0">Register</a>
+                    <a href="<?php print base_url($lg."/register");?>" class="nav-link p-0 <?php if(PAGE=='register') print 'active';?>">Register</a>
                   </li>
                 </ul>
               </div>

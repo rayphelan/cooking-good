@@ -9,6 +9,7 @@ include("_header.php");
   <body id="home-section">
     
     <main>
+      
       <!-- Header -->
       <?php include("_nav-header.php"); ?>
       <!-- End Header -->
@@ -35,7 +36,7 @@ include("_header.php");
 
       
       <!-- Contact -->
-      <?php include("_contact-footer.php"); ?>
+      <?php include("_no-contact-footer.php"); ?>
       <!-- End Contact -->
 
     </main>      
