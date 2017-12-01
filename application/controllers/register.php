@@ -22,6 +22,13 @@ class Register extends CI_Controller {
 	}
 
 
+	//	Register Invaid Page
+	public function invalid() {
+		$data['lg'] = $this->lang->lang();
+		$this->load->view('register-invalid',$data);
+	}
+
+
 	//	Submit Registration Form
 	public function submit() {
 		
@@ -39,7 +46,7 @@ class Register extends CI_Controller {
 			$this->data[$v] = $this->$v;
 		}		
 		$this->activation_code = md5(rand(0,99999).$first_name.$last_name.$mail.time());
-		$this->activation_link = base_url($lg.'/register/activate/'.$this->activation_code);
+		$this->activation_link = base_url($lg.'/register/verify/'.$this->activation_code)."/".base64_encode($this->mail);
 		$this->subject_message = 'Cooking Good - Account Activation';
 		$this->name = $this->first_name." ".$this->last_name;
 
@@ -91,6 +98,31 @@ class Register extends CI_Controller {
 
 
 
+	//	Verify Email Account
+	public function verify($activation_code,$email) {
+
+		if(!$activation_code || !$email) return false;
+
+		//	Decode Email
+		$email = base64_decode($email);
+
+		//	Check Database to verify email address
+		$user_id = $this->register_model->verify($activation_code, $email);
+
+		//	Invalid?
+		if(!$user_id) {
+			redirect(base_url($lg."/register/invalid"),"refresh");
+			return false;
+		}
+
+		//	Valid User - Log in user
+		die('Valid user '.$user_id);
+
+	}
+
+
+
+	//	Private -----------------------------------------------------------
 	//	Send email
 	private function send() {		
 		$this->email->from('cooking-good@ray-phelan.com','Cooking Good');
