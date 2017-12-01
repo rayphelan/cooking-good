@@ -56,9 +56,9 @@ if($_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1') {
 	$db['default']['database'] = 'cooking_good'; 
 }
 else {
-	$db['default']['username'] = ''; 
-	$db['default']['password'] = ''; 
-	$db['default']['database'] = ''; 
+	$db['default']['username'] = 'rayphela_cooking'; 
+	$db['default']['password'] = ']l%(h}hGHe~J'; 
+	$db['default']['database'] = 'rayphela_cookinggood'; 
 }
 
 

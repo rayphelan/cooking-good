@@ -50,7 +50,7 @@ function ajaxContact() {
         return false;
       break;
       case 'success':
-        contactMessageSent();
+        showThankyou();
         return true;
       break;
       case 'error':
@@ -66,50 +66,16 @@ function ajaxContact() {
 }
 
 
-//  Display Error Messages
-function displayErrorMessage(title, message) {
-  $('#error-section, #form-section').toggle();
-  $('#error-title').html(title);
-  $('#error-message').html(message);  
-}
 
-//  Click OK on error message
-function errorMessageOK() {
-  $('#error-section, #form-section, .loading-spinner, .submit-button').toggle();
-}
-
-//  Contact Message Sent - Say Thank you
-function contactMessageSent() {
-  $('#thank-you-section').show()
-  $('#form-section').hide();
-}
-
-//  Server responded with error
-function serverRespondedWithError() {
-  displayErrorMessage('We are sorry','The server responded with an error');
-  return false;
-}
-
-
-//  Recaptcha Error
-function recaptchaError() {
-  displayErrorMessage('We are sorry','Recaptcha did not authorize this message');
-  return false;
-}
-
-//  Ajax error
-function ajaxError() {
-  displayErrorMessage('We are sorry','An unknown error occured');
-  return false;
-}
-
+//  -----------------------------------------------------------------------------------------
+//  REGISTRATION
 
 //  Validate Registration Form
 function validateRegisterForm() {
 
-  ajaxRegistration();
+  $('.loading-spinner, .submit-button').toggle();
 
-  var email = $('#email').val();
+  var email = $('#mail').val();
   var first_name = $('#first_name').val();
   var last_name = $('#last_name').val();
   var password = $('#password').val();
@@ -148,19 +114,73 @@ function ajaxRegistration() {
   var url = $('#registerForm').attr('action');
   var data = $('#registerForm').serialize();
   var callback = function(data, status) {
+
     if(status != 'success') {
       ajaxError();
       return false;
     }
     //  Check server response
     switch(data) {
-      case 'hello':
-        alert('Server said hello');
+      case 'recaptcha_error':
+        recaptchaError();
+        return false;
+      break;
+      case 'success':
+        showThankyou();
+        return true;
+      break;
+      case 'error':
+        serverRespondedWithError();
         return false;
       break;
     }
+    return false;
   }
 
-  $.post(url, data, callback);
+  $.post(url,data,callback);
 
+
+}
+
+
+
+//  -----------------------------------------------------------------------------------------
+//  DISPLAY MESSAGES
+
+//  Display Error Messages
+function displayErrorMessage(title, message) {
+  $('#error-section, #form-section').toggle();
+  $('#error-title').html(title);
+  $('#error-message').html(message);  
+}
+
+//  Click OK on error message
+function errorMessageOK() {
+  $('#error-section, .loading-spinner').hide();
+  $('#form-section, .submit-button').show();
+}
+
+//  Say Thank you
+function showThankyou() {
+  $('#thank-you-section').show()
+  $('#form-section').hide();
+}
+
+//  Server responded with error
+function serverRespondedWithError() {
+  displayErrorMessage('We are sorry','The server responded with an error');
+  return false;
+}
+
+
+//  Recaptcha Error
+function recaptchaError() {
+  displayErrorMessage('We are sorry','Recaptcha did not authorize this message');
+  return false;
+}
+
+//  Ajax error
+function ajaxError() {
+  displayErrorMessage('We are sorry','An unknown error occured');
+  return false;
 }

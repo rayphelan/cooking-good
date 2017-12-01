@@ -18,14 +18,6 @@ class Contact extends CI_Controller {
 	}
 
 
-	//	Thank you Page
-	public function thankyou() {
-		$data['lg'] = $this->lang->lang();
-		$this->load->view('contact-thank-you',$data);
-	}
-
-
-
 	//	Submit Contact Form
 	public function submit() {
 		
@@ -34,7 +26,7 @@ class Contact extends CI_Controller {
 		$this->setEmail();
 
 
-		//	 Vars
+		//	 Accepted Vars
 		$vars = ['mood','first_name','last_name','mail','message','reply','eaten','love','phone'];
 		foreach($vars as $v) {
 			$this->$v = $this->security->xss_clean(trim($this->vars[$v]));
@@ -51,18 +43,10 @@ class Contact extends CI_Controller {
 		$response = json_decode($this->httpPost($url,$array));
 
 
-		//	Unauthorized
+		//	Unauthorized Recaptcha
 		if (!$captcha || $response->success == false) { #die('recaptcha failed');
 			
-			/*
-			?>
-			<script type="text/javascript">
-				window.parent.alert('Unauthorized by Recaptcha');
-			</script>
-			<?php
-			
-			redirect($lg.'/contact','refresh');
-			*/
+			// Server response
 			echo 'recaptcha_error';
 			return false;
 		}
@@ -75,10 +59,9 @@ class Contact extends CI_Controller {
 		//	Send email
 		$result = $this->send();
 
-		echo $result? 'success': 'error';
 
-		//	Thank you
-		#redirect($lg.'/contact/thankyou', 'refresh');
+		//	Server Response
+		echo $result? 'success': 'error';
 
 	}
 

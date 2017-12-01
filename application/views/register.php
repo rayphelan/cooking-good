@@ -31,9 +31,44 @@ include("_header.php");
     </section>
     <!-- End Promo Block -->
 
+
+
+    <!-- Thank you message -->
+    <div id="thank-you-section" style="display: none;">
+      <div class="container g-py-100 ">
+        <div class="u-shadow-v19 g-max-width-645 g-brd-around g-brd-gray-light-v4 text-center rounded mx-auto g-pa-30 g-pa-50--md">
+          <span class="u-icon-v3 u-icon-size--lg g-color-white g-bg-primary rounded-circle g-pa-15 mb-5">            
+            <i class="fa fa-check"></i>
+          </span>
+          <div class="mb-5">
+            <h2 class="mb-4">Thank you!</h2>
+            <p>Thank you for Registering. We have sent you an activation email. Please click on the activation link in that email to verify your new account.</p>            
+          </div>
+          <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="<?php print base_url($lg);?>">Continue</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Thank you message -->
+
+
+    <!-- Error Message -->
+    <div id="error-section" style="display: none;">
+      <div class="container g-py-100">
+        <div class="u-shadow-v19 g-max-width-645 g-brd-around g-brd-gray-light-v4 text-center rounded mx-auto g-pa-30 g-pa-50--md">          
+          <div class="mb-5">
+            <h2 class="mb-4" id="error-title"></h2>
+            <p id="error-message"></p>            
+          </div>
+          <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="javascript:void(0);" onclick="errorMessageOK()">OK</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Thank you message --> 
+
 	  <!-- Signup -->
-      <section class="container g-pt-100 g-pb-20">
+      <section id="form-section" class="container g-pt-100 g-pb-20">
         <div class="row">
+          
           <div class="col-lg-5 order-lg-2 g-mb-80">
             <div class="g-brd-around g-brd-gray-light-v3 g-bg-white rounded g-px-30 g-py-50 mb-4">
               <header class="text-center mb-4">
@@ -57,7 +92,7 @@ include("_header.php");
                     <span class="input-group-addon g-width-45 g-brd-gray-light-v3 g-color-gray-dark-v5">
                       <i class="icon-finance-067 u-line-icon-pro"></i>
                     </span>
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="email" placeholder="Email Address" name="email" id="email">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="email" placeholder="Email Address" name="mail" id="mail">
                   </div>
                 </div>
 
@@ -79,7 +114,7 @@ include("_header.php");
                   </div>
                 </div>
 
-                <div class="mb-1">
+                <div class="mb-4">
                   <label class="form-check-inline u-check g-color-gray-dark-v5 g-font-size-13 g-pl-25 mb-2">
                     <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" type="checkbox" id="tcs">
                     <span class="d-block u-check-icon-checkbox-v6 g-absolute-centered--y g-left-0">
@@ -89,7 +124,12 @@ include("_header.php");
                   </label>
                 </div>
 
-                <button id="registerButton" class="btn btn-block u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" type="button">Register</button>
+                <div class="mb-4">
+                  <div class="g-recaptcha" data-sitekey="6Le2mCkTAAAAADZRfFcgK-o1NuMmyA5bIxUxCaRt"></div>
+                </div>
+
+                <button id="registerButton" class="submit-button btn btn-block u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" type="button">Register</button>
+                <div class="loading-spinner" style="display: none"></div>
               </form>
               <!-- End Form -->
             </div>
@@ -99,7 +139,9 @@ include("_header.php");
                 <a class="g-font-weight-600" href="<?php print base_url($lg."/login");?>">Log in</a></p>
             </div>
           </div>
+          
 
+          <!-- Message Section -->
           <div class="col-lg-7 order-lg-1 g-mb-80">
             <div class="g-pr-20--lg">
               <div class="mb-5">
