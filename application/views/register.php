@@ -120,7 +120,7 @@ include("_header.php");
                     <span class="d-block u-check-icon-checkbox-v6 g-absolute-centered--y g-left-0">
                       <i class="fa" data-check-icon="&#xf00c"></i>
                     </span>
-                    I accept the <a href="#!">Terms and Conditions</a>
+                    I accept the <a href="<?php print base_url($lg."/terms");?>">Terms and Conditions</a>
                   </label>
                 </div>
 

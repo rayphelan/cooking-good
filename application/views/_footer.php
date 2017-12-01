@@ -77,6 +77,7 @@
 
         // initialization of popups
         $.HSCore.components.HSPopup.init('.js-fancybox');
+
       });
 
       $(window).on('load', function() {
