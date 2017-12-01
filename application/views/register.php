@@ -41,42 +41,14 @@ include("_header.php");
               </header>
 
               <!-- Form -->
-              <form class="g-py-15">
+              <form class="g-py-15" id="registerForm" action="<?php print base_url($lg."/register/submit");?>" method="post">
                 <div class="row">
                   <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" placeholder="First name">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" placeholder="First name" name="first_name" id="first_name">
                   </div>
 
                   <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" placeholder="Last name">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-6 col-md-12 col-lg-6 g-mb-20">
-                    <select class="js-custom-select u-select-v1 g-brd-gray-light-v3 g-color-gray-dark-v5 rounded g-py-12" style="width: 100%;">
-                      <option value="" selected>Month</option>
-                      <option value="First Option">January</option>
-                      <option value="Second Option">February</option>
-                      <option value="Third Option">March</option>
-                      <option value="Fourth Option">April</option>
-                      <option value="Fifth Option">May</option>
-                      <option value="Sixth Option">June</option>
-                      <option value="Seventh Option">July</option>
-                      <option value="Eighth Option">August</option>
-                      <option value="Ninth Option">September</option>
-                      <option value="Tenth Option">October</option>
-                      <option value="Eleventh Option">November</option>
-                      <option value="Twelfth Option">December</option>
-                    </select>
-                  </div>
-
-                  <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" placeholder="Day">
-                  </div>
-
-                  <div class="col g-mb-20">
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" placeholder="Year">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 rounded g-py-15 g-px-15" type="text" placeholder="Last name" name="last_name" id="last_name">
                   </div>
                 </div>
 
@@ -85,7 +57,7 @@ include("_header.php");
                     <span class="input-group-addon g-width-45 g-brd-gray-light-v3 g-color-gray-dark-v5">
                       <i class="icon-finance-067 u-line-icon-pro"></i>
                     </span>
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="email" placeholder="Email Address">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="email" placeholder="Email Address" name="email" id="email">
                   </div>
                 </div>
 
@@ -94,7 +66,7 @@ include("_header.php");
                     <span class="input-group-addon g-width-45 g-brd-gray-light-v3 g-color-gray-dark-v5">
                       <i class="icon-media-094 u-line-icon-pro"></i>
                     </span>
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="password" placeholder="Password">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="password" placeholder="Password" name="password" id="password">
                   </div>
                 </div>
 
@@ -103,13 +75,13 @@ include("_header.php");
                     <span class="input-group-addon g-width-45 g-brd-gray-light-v3 g-color-gray-dark-v5">
                       <i class="icon-media-094 u-line-icon-pro"></i>
                     </span>
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="password" placeholder="Confirm Password">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password">
                   </div>
                 </div>
 
                 <div class="mb-1">
                   <label class="form-check-inline u-check g-color-gray-dark-v5 g-font-size-13 g-pl-25 mb-2">
-                    <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" type="checkbox">
+                    <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" type="checkbox" id="tcs">
                     <span class="d-block u-check-icon-checkbox-v6 g-absolute-centered--y g-left-0">
                       <i class="fa" data-check-icon="&#xf00c"></i>
                     </span>
@@ -117,7 +89,7 @@ include("_header.php");
                   </label>
                 </div>
 
-                <button class="btn btn-block u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" type="button">Register</button>
+                <button id="registerButton" class="btn btn-block u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" type="button">Register</button>
               </form>
               <!-- End Form -->
             </div>

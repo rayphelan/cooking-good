@@ -75,7 +75,7 @@ include("_header.php");
       </div>
       <!-- End Icon Blocks -->
 
-      <div class="g-py-100">
+      <div class="g-py-100 " id="form-section">
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <h3 class="g-color-black g-font-weight-600 text-center mb-5">Who are you, and how can we help?</h3>
@@ -137,7 +137,8 @@ include("_header.php");
                 </div>
 
                 <div class="col-md-6 text-left g-mt-10">
-                  <button id="contactButton" class="btn u-btn-primary g-font-weight-600 g-font-size-13 text-uppercase g-rounded-25 g-py-15 g-px-30" type="button" role="button">Send Request</button>
+                  <button id="contactButton" class="submit-button btn u-btn-primary g-font-weight-600 g-font-size-13 text-uppercase g-rounded-25 g-py-15 g-px-30" type="button" role="button">Send Request</button>
+                  <div class="loading-spinner" style="display: none"></div>
                 </div>
 
               </div>
@@ -149,6 +150,39 @@ include("_header.php");
     </section>
     <!-- End Contact Form -->	  
 
+
+
+    <!-- Thank you message -->
+    <div id="thank-you-section" style="display: none;">
+      <div class="container g-py-100">
+        <div class="u-shadow-v19 g-max-width-645 g-brd-around g-brd-gray-light-v4 text-center rounded mx-auto g-pa-30 g-pa-50--md">
+          <span class="u-icon-v3 u-icon-size--lg g-color-white g-bg-primary rounded-circle g-pa-15 mb-5">            
+            <i class="fa fa-check"></i>
+          </span>
+          <div class="mb-5">
+            <h2 class="mb-4">Thank you!</h2>
+            <p>Thank you for contacting us. We will read your message shortly.</p>            
+          </div>
+          <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="<?php print base_url($lg);?>">Continue</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Thank you message -->
+
+
+    <!-- Error Message -->
+    <div id="error-section" style="display: none;">
+      <div class="container g-py-100">
+        <div class="u-shadow-v19 g-max-width-645 g-brd-around g-brd-gray-light-v4 text-center rounded mx-auto g-pa-30 g-pa-50--md">          
+          <div class="mb-5">
+            <h2 class="mb-4" id="error-title"></h2>
+            <p id="error-message"></p>            
+          </div>
+          <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="javascript:void(0);" onclick="errorMessageOK()">OK</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Thank you message -->    
 
 
 

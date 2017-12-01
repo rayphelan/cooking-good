@@ -49,10 +49,18 @@
     <script>
       $(document).on('ready', function () {
 
-        //  Validate Contact Form  
+
+        //  Validate Contact Form  -------------------------------
         $('#contactButton').on('click', function() {
           validateContactForm();
-        })
+        });
+
+
+        //  Registration Form ------------------------------------
+        $('#registerButton').on('click', function() {          
+          validateRegisterForm();
+        });
+
 
         // initialization of carousel
         $.HSCore.components.HSCarousel.init('.js-carousel');

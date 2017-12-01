@@ -25,7 +25,7 @@ class Register extends CI_Controller {
 
 	//	Submit Registration
 	public function submit() {
-		
+		return false;
 	}
 
 }
