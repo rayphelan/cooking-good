@@ -45,18 +45,25 @@ function ajaxContact() {
     }
     //  Check server response
     switch(data) {
-      case 'recaptcha_error':
-        recaptchaError();
-        return false;
-      break;
+
+      //  Successfull Contact 
       case 'success':
         showThankyou();
         return true;
       break;
+
+      //  User may be Robot
+      case 'recaptcha_error':
+        recaptchaError();
+        return false;
+      break;
+      
+      //  Server error
       case 'error':
         serverRespondedWithError();
         return false;
       break;
+
     }
     return false;
   }
@@ -121,16 +128,28 @@ function ajaxRegistration() {
     }
     //  Check server response
     switch(data) {
-      case 'recaptcha_error':
-        recaptchaError();
-        return false;
-      break;
+
+      //  Successfull Registration
       case 'success':
         showThankyou();
         return true;
       break;
+      
+      //  User may be Robot
+      case 'recaptcha_error':
+        recaptchaError();
+        return false;
+      break;
+      
+      //  Server error
       case 'error':
         serverRespondedWithError();
+        return false;
+      break;
+
+      //  User email already registered
+      case 'duplicate_email':
+        displayErrorMessage('We are sorry','The email address you provided seems to already be registered. Please use the Log In page instead.');
         return false;
       break;
     }

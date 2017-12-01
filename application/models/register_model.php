@@ -15,10 +15,14 @@ class Register_model extends CI_Model {
 		foreach($vars as $v) {
 			$array[$v] = $this->$v;
 		}
-		#print_r($array);
-
 		$this->db->insert("user",$array);
 		return $this->db->insert_id();
+	}
+
+
+	//	Duplicate Email
+	public function duplicateEmail($mail) {
+		return $this->db->query("SELECT id FROM user WHERE mail = '".$mail."'")->result();
 	}
 	
 }

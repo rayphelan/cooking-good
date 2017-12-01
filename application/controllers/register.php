@@ -65,6 +65,13 @@ class Register extends CI_Controller {
 		}
 
 
+		//	Check if email address is already registered
+		if($this->register_model->duplicateEmail($this->mail)) {
+			echo 'duplicate_email';
+			return false;
+		}
+
+
 		//	Save User to Database and get User ID
 		$user_id = $this->register_model->save($vars);
 		
@@ -81,6 +88,7 @@ class Register extends CI_Controller {
 		echo ($result && $user_id)? 'success': 'error';
 
 	}
+
 
 
 	//	Send email
