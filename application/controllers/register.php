@@ -29,6 +29,13 @@ class Register extends CI_Controller {
 	}
 
 
+	//	Register Vaid Page
+	public function valid() {
+		$data['lg'] = $this->lang->lang();
+		$this->load->view('register-valid',$data);
+	}	
+
+
 	//	Submit Registration Form
 	public function submit() {
 		
@@ -116,7 +123,12 @@ class Register extends CI_Controller {
 		}
 
 		//	Valid User - Log in user
-		die('Valid user '.$user_id);
+		$this->load->model('login_model');
+		$this->login_model->loginUser($user_id);
+
+
+		//	Redirect to valid register
+		redirect(base_url($lg."/register/valid"),"refresh");
 
 	}
 

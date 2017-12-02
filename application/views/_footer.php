@@ -62,6 +62,12 @@
         });
 
 
+        //  Validate Login Form ----------------------------------
+        $('#loginButton').on('click', function() {
+          validateLoginForm();
+        })
+        
+
         // initialization of carousel
         $.HSCore.components.HSCarousel.init('.js-carousel');
 

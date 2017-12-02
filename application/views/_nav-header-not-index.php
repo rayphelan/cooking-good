@@ -34,27 +34,51 @@
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
                     <a href="<?php print base_url($lg."/contact");?>" class="nav-link p-0 <?php if(PAGE=='contact') print 'active';?>">Contact</a>
                   </li>
-                  <li class="nav-item g-ml-15--lg">
+                  
+                  <?php if(!$_SESSION['CG_user_id']) {?>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
                     <a href="<?php print base_url($lg."/login");?>" class="nav-link p-0 <?php if(PAGE=='login') print 'active';?>">Log in</a>
                   </li>
-                  <li class="nav-item g-ml-15--lg">
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
                     <a href="<?php print base_url($lg."/register");?>" class="nav-link p-0 <?php if(PAGE=='register') print 'active';?>">Register</a>
                   </li>
+                  <?php } ?>
+
+                  <?php if($_SESSION['CG_user_id']) {?>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg dropdown">
+                    
+                      <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       My Account
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item g-mb-7" href="<?php print base_url($lg."/recipes/upload");?>">Upload Recipe</a>
+                        <a class="dropdown-item g-mb-7" href="<?php print base_url($lg."/me");?>">My Profile</a>                        
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item g-mb-7" href="<?php print base_url($lg."/logout");?>">Logout</a>
+                      </div>                    
+                  </li>
+                  <?php } ?>  
+
                 </ul>
               </div>
               <!-- End Navigation -->
 
               <!-- Responsive Toggle Button -->
-              <button class="navbar-toggler btn btn-primary g-pos-abs g-top-15 g-right-0" type="button"
+              <button class="navbar-toggler btn btn-sm u-btn-primary u-btn-skew u-btn-hover-v2-1 g-font-weight-600 g-letter-spacing-0_5 text-uppercase g-brd-2 g-rounded-0 g-pos-abs g-top-15 g-right-0" type="button"
                       aria-label="Toggle navigation"
                       aria-expanded="false"
                       aria-controls="navBar"
                       data-toggle="collapse"
                       data-target="#navBar">
-                MENU
+                <span class="u-btn-skew__inner">
+                  MENU
+                </span>
               </button>
               <!-- End Responsive Toggle Button -->
             </div>
           </nav>
         </div>
       </header>
+
+
+      

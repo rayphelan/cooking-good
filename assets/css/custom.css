@@ -17,6 +17,22 @@
 
 
 
+/* Nav bar drop down */
+.nav-item.dropdown {
+	margin-top:-7px;
+}
+.dropdown-menu {
+  background-color: #000;
+}
+
+a.dropdown-item {
+	color: #fff;
+}
+a.dropdown-item:hover {
+	color:#f7b221;
+	background-color: #111;
+}
+
 
 span.hamburger-inner, span.hamburger-box {
 	color:#f7b221 !important;

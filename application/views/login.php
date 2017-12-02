@@ -31,8 +31,27 @@ include("_header.php");
     </section>
     <!-- End Promo Block -->
 
+
+
+
+
+    <!-- Error Message -->
+    <div id="error-section" style="display: none;">
+      <div class="container g-py-100">
+        <div class="u-shadow-v19 g-max-width-645 g-brd-around g-brd-gray-light-v4 text-center rounded mx-auto g-pa-30 g-pa-50--md">          
+          <div class="mb-5">
+            <h2 class="mb-4" id="error-title"></h2>
+            <p id="error-message"></p>            
+          </div>
+          <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="javascript:void(0);" onclick="errorMessageOK()">OK</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Thank you message --> 
+
+
 	  <!-- Login -->
-      <section class="container g-pt-10 g-pb-20 mt-5">
+      <section id="form-section" class="container g-pt-10 g-pb-20 mt-5">
         <div class="row justify-content-between">
           <div class="col-md-6 col-lg-5 order-lg-2 g-mb-80">
             <div class="g-brd-around g-brd-gray-light-v3 g-bg-white rounded g-px-30 g-py-50 mb-4">
@@ -41,13 +60,13 @@ include("_header.php");
               </header>
 
               <!-- Form -->
-              <form class="g-py-15">
+              <form id="loginForm" method="post" action="<?php print base_url($lg."/login/submit");?>" class="g-py-15">
                 <div class="mb-4">
                   <div class="input-group g-rounded-left-3">
                     <span class="input-group-addon g-width-45 g-brd-gray-light-v3 g-color-gray-dark-v5">
                       <i class="icon-finance-067 u-line-icon-pro"></i>
                     </span>
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="email" placeholder="Email Address">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="email" name="mail" id="mail" placeholder="Email Address">
                   </div>
                 </div>
 
@@ -56,7 +75,7 @@ include("_header.php");
                     <span class="input-group-addon g-width-45 g-brd-gray-light-v3 g-color-gray-dark-v5">
                       <i class="icon-media-094 u-line-icon-pro"></i>
                     </span>
-                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="password" placeholder="Password">
+                    <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-rounded-left-0 g-rounded-right-3 g-py-15 g-px-15" type="password" placeholder="Password" name="password" id="password">
                   </div>
                 </div>
 
@@ -76,9 +95,9 @@ include("_header.php");
                 </div>
 
                 <div class="mb-1">
-                  <button class="btn btn-block u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" type="button">Login</button>
+                  <button id="loginButton" class="submit-button btn btn-block u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" type="button">Login</button>
                 </div>
-
+                <div class="loading-spinner" style="display: none"></div>
                 
               </form>
               <!-- End Form -->

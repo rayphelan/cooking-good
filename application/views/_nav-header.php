@@ -34,12 +34,31 @@
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
                     <a href="<?php print base_url($lg."/contact");?>" class="nav-link p-0">Contact</a>
                   </li>
+
+                  <?php if(!$_SESSION['CG_user_id']) {?>
                   <li class="nav-item g-ml-15--lg">
                     <a href="<?php print base_url($lg."/login");?>" class="nav-link p-0">Log in</a>
                   </li>
                   <li class="nav-item g-ml-15--lg">
                     <a href="<?php print base_url($lg."/register");?>" class="nav-link p-0">Register</a>
                   </li>
+                  <?php } ?>
+
+                  <?php if($_SESSION['CG_user_id']) {?>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg dropdown">
+                    
+                      <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       My Account
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item g-mb-7" href="<?php print base_url($lg."/recipes/upload");?>">Upload Recipe</a>
+                        <a class="dropdown-item g-mb-7" href="<?php print base_url($lg."/me");?>">My Profile</a>                        
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item g-mb-7" href="<?php print base_url($lg."/logout");?>">Logout</a>
+                      </div>                    
+                  </li>
+                  <?php } ?> 
+                  
                 </ul>
               </div>
               <!-- End Navigation -->
