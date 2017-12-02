@@ -144,12 +144,6 @@ function ajaxRegistration() {
         recaptchaError();
         return false;
       break;
-      
-      //  Server error
-      case 'error':
-        serverRespondedWithError();
-        return false;
-      break;
 
       //  User email already registered
       case 'duplicate_email':
@@ -157,6 +151,7 @@ function ajaxRegistration() {
         return false;
       break;
 
+      //  Server error
       default: 
         serverRespondedWithError();
       break;
@@ -237,11 +232,6 @@ function ajaxLogin() {
       break;
 
       //  Server error
-      case 'error':
-        serverRespondedWithError();
-        return false;
-      break;
-
       default: 
         serverRespondedWithError();
       break;
@@ -254,6 +244,137 @@ function ajaxLogin() {
 
 
 }
+
+
+//  -----------------------------------------------------------------------------------------
+//  RESET PASSWORD
+//  Validate Reset Password Form
+function validateResetPWForm() {
+
+  $('.loading-spinner, .submit-button').toggle();
+
+  var email = $('#mail').val();
+
+  if(!email) {
+    displayErrorMessage('Please check','Please fill in your email address.');
+    return false;
+  }
+  else {
+    if(!validateEmail(email)) {
+      displayErrorMessage('Please check','The email address seems to be invalid');
+      return false;
+    }
+    else {         
+      //  Successful Validation, Submit Form                     
+      ajaxResetPW();
+    }
+  }
+}
+//  Reset Password Ajax
+function ajaxResetPW() {  
+  
+  var url = $('#resetPWForm').attr('action');
+  var data = $('#resetPWForm').serialize();
+  var callback = function(data, status) {
+
+    //$('#testdiv').html(data);
+
+    if(status != 'success') {
+      ajaxError();
+      return false;
+    }
+    //  Check server response
+    switch(data) {
+
+      //  Successfull Registration
+      case 'success':
+        showThankyou();
+        return true;
+      break;
+      
+      //  Invalid 
+      case 'invalid':
+        displayErrorMessage('We are sorry','The email address you provided does not match our records. <br>Please try again.');
+        return false;
+      break;
+
+
+      //  Server error
+      default: 
+        serverRespondedWithError();
+      break;
+
+    }
+    return false;
+  }
+
+  $.post(url,data,callback);
+
+
+}
+
+
+
+//  -----------------------------------------------------------------------------------------
+//  NEW PASSWORD
+//  Validate New Password Form
+function validateNewPWForm() {
+
+  $('.loading-spinner, .submit-button').toggle();
+
+  var password = $('#password').val();
+  var confirm_password = $('#confirm_password').val();
+
+  if(!password || !confirm_password) {
+    displayErrorMessage('Please check','Please fill in your password and password confirmation.');
+    return false;
+  }
+  else {
+    if(password != confirm_password) {
+      displayErrorMessage('Please check','Your password and password confirmation do not match.');
+      return false;   
+    }
+    //  Successful Validation, Submit Form                     
+      ajaxNewPW();
+  }
+}
+//  New Password Ajax
+function ajaxNewPW() {  
+  
+  var url = $('#newPWForm').attr('action');
+  var data = $('#newPWForm').serialize();
+  var callback = function(data, status) {
+
+    //$('#testdiv').html(data);
+
+    if(status != 'success') {
+      ajaxError();
+      return false;
+    }
+    //  Check server response
+    switch(data) {
+
+      //  Successfull Registration
+      case 'success':
+        showThankyou();
+        return true;
+      break;
+
+      //  Server error
+      default: 
+        serverRespondedWithError();
+      break;
+
+    }
+    return false;
+  }
+
+  $.post(url,data,callback);
+
+
+}
+
+
 
 
 //  -----------------------------------------------------------------------------------------

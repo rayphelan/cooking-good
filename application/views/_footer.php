@@ -68,6 +68,18 @@
         })
         
 
+        //  Validate Reset Password Form -------------------------
+        $('#resetPWButton').on('click', function() {
+          validateResetPWForm();
+        })
+
+
+        //  Validate Reset Password Form -------------------------
+        $('#newPWButton').on('click', function() {
+          validateNewPWForm();
+        })
+
+
         // initialization of carousel
         $.HSCore.components.HSCarousel.init('.js-carousel');
 

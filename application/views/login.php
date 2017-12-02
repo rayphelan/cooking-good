@@ -90,7 +90,7 @@ include("_header.php");
                     </label>
                   </div>
                   <div class="col align-self-center text-right">
-                    <a class="g-font-size-13" href="page-password-recovery-1.html">Forgot password?</a>
+                    <a class="g-font-size-13" href="<?php print base_url($lg."/resetpassword");?>">Forgot password?</a>
                   </div>
                 </div>
 

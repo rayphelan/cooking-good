@@ -138,7 +138,7 @@ class Register extends CI_Controller {
 	//	Send email
 	private function send() {		
 		$this->email->from('cooking-good@ray-phelan.com','Cooking Good');
-		$this->email->bcc('rayphelan@gmail.com','Cooking Good Registration Activation');
+		$this->email->bcc('rayphelan@gmail.com','Cooking Good');
 		$this->email->to($this->mail, $this->name);										
 		#$this->email->reply_to($this->mail,$this->name);
 		$this->email->subject($this->subject_message);
