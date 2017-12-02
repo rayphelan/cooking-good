@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="<?php print base_url('assets/vendor/icon-awesome/css/font-awesome.min.css');?>">
     <link rel="stylesheet" href="<?php print base_url('assets/vendor/icon-line-pro/style.css');?>">
 
+
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="<?php print base_url('assets/vendor/icon-awesome/css/font-awesome.min.css');?>">
     <link rel="stylesheet" href="<?php print base_url('assets/vendor/icon-hs/style.css');?>">
@@ -30,6 +31,10 @@
     <link rel="stylesheet" href="<?php print base_url('assets/vendor/slick-carousel/slick/slick.css');?>">
     <link rel="stylesheet" href="<?php print base_url('assets/vendor/cubeportfolio-full/cubeportfolio/css/cubeportfolio.min.css');?>">
     <link rel="stylesheet" href="<?php print base_url('assets/vendor/fancybox/jquery.fancybox.css');?>">
+
+    <link rel="stylesheet" href="<?php print base_url('assets/vendor/icon-line/css/simple-line-icons.css');?>">
+    <link rel="stylesheet" href="<?php print base_url('assets/vendor/icon-etlinefont/style.css');?>">
+  
 
     <!-- CSS Template -->
     <link rel="stylesheet" href="<?php print base_url('assets/css/styles.op-consulting.css');?>">

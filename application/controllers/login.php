@@ -13,7 +13,7 @@ class Login extends CI_Controller {
 		$this->load->model('login_model');
 
 		if($_SESSION['CG_user_id']) {
-			redirect(base_url($this->lang->lang()."/me"),"refresh");
+			redirect(base_url($this->lang->lang()."/profile/me"),"refresh");
 			return;
 		}
 

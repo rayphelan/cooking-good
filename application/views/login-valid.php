@@ -43,7 +43,7 @@ include("_header.php");
             <p>You are now logged in to your account.</p>            
           </div>
           <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="<?php print base_url($lg."/recipes");?>">Recipes</a>
-          <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="<?php print base_url($lg."/me");?>">Profile</a>
+          <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="<?php print base_url($lg."/profile/me");?>">Profile</a>
         </div>
       </div>
     </div>
