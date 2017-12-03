@@ -146,7 +146,7 @@ include("_header.php");
               <hr class="g-mb-60">
 
               <!-- Pagination -->
-              <nav class="g-mb-100" aria-label="Page Navigation">
+              <nav class="g-mb-50" aria-label="Page Navigation">
                 <ul class="list-inline mb-0">
                   <li class="list-inline-item hidden-down">
                     <a class="active u-pagination-v1__item g-width-30 g-height-30 g-brd-gray-light-v3 g-brd-primary--active g-color-white g-bg-primary--active g-font-size-12 rounded-circle g-pa-5" href="#!">1</a>
@@ -177,6 +177,22 @@ include("_header.php");
                 </ul>
               </nav>
               <!-- End Pagination -->
+
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <ins class="adsbygoogle"
+                   style="display:block; text-align:center;"
+                   data-ad-layout="in-article"
+                   data-ad-format="fluid"
+                   data-ad-client="ca-pub-1916083344486962"
+                   data-ad-slot="5065017902"></ins>
+              <script>
+                   (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+
+
+              <hr class="g-mb-30">
+
+
             </div>
           </div>
           <!-- End Content -->
@@ -237,9 +253,11 @@ include("_header.php");
             </div>
           </div>
           <!-- End Filters -->
+
         </div>
       </div>
       <!-- End Products -->
+
 
 
     </main>      

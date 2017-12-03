@@ -43,11 +43,7 @@
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<?php print base_url('assets/images/recipes/2.jpg');?>" alt="Grilled Chicken">
               <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
                 <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
-                  <li class="list-inline-item">
-                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
-                      <i class="icon-communication-095 u-line-icon-pro"></i>
-                    </a>
-                  </li>
+                  
                   <li class="list-inline-item">
                     <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="<?php print base_url('assets/images/recipes/2.jpg');?>">
                       <i class="icon-communication-017 u-line-icon-pro"></i>
@@ -69,11 +65,7 @@
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<?php print base_url('assets/images/recipes/3.jpg');?>" alt="Grilled Salmon">
               <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
                 <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
-                  <li class="list-inline-item">
-                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
-                      <i class="icon-communication-095 u-line-icon-pro"></i>
-                    </a>
-                  </li>
+                  
                   <li class="list-inline-item">
                     <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="<?php print base_url('assets/images/recipes/3.jpg');?>">
                       <i class="icon-communication-017 u-line-icon-pro"></i>
@@ -96,11 +88,7 @@
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<?php print base_url('assets/images/recipes/5.jpg');?>" alt="Canapes">
               <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
                 <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
-                  <li class="list-inline-item">
-                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
-                      <i class="icon-communication-095 u-line-icon-pro"></i>
-                    </a>
-                  </li>
+                  
                   <li class="list-inline-item">
                     <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="<?php print base_url('assets/images/recipes/5.jpg');?>">
                       <i class="icon-communication-017 u-line-icon-pro"></i>
@@ -123,11 +111,7 @@
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<?php print base_url('assets/images/recipes/7.jpg');?>" alt="Muchies">
               <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
                 <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
-                  <li class="list-inline-item">
-                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
-                      <i class="icon-communication-095 u-line-icon-pro"></i>
-                    </a>
-                  </li>
+                  
                   <li class="list-inline-item">
                     <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="<?php print base_url('assets/images/recipes/7.jpg');?>">
                       <i class="icon-communication-017 u-line-icon-pro"></i>
@@ -149,11 +133,7 @@
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<?php print base_url('assets/images/recipes/8.jpg');?>" alt="Meat">
               <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
                 <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
-                  <li class="list-inline-item">
-                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
-                      <i class="icon-communication-095 u-line-icon-pro"></i>
-                    </a>
-                  </li>
+                  
                   <li class="list-inline-item">
                     <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="<?php print base_url('assets/images/recipes/8.jpg');?>">
                       <i class="icon-communication-017 u-line-icon-pro"></i>
@@ -176,11 +156,7 @@
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<?php print base_url('assets/images/recipes/9.jpg');?>" alt="Roast Beef">
               <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
                 <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
-                  <li class="list-inline-item">
-                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
-                      <i class="icon-communication-095 u-line-icon-pro"></i>
-                    </a>
-                  </li>
+                  
                   <li class="list-inline-item">
                     <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="<?php print base_url('assets/images/recipes/9.jpg');?>">
                       <i class="icon-communication-017 u-line-icon-pro"></i>
@@ -204,11 +180,7 @@
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<?php print base_url('assets/images/recipes/10.jpg');?>" alt="King Prawns">
               <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
                 <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
-                  <li class="list-inline-item">
-                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
-                      <i class="icon-communication-095 u-line-icon-pro"></i>
-                    </a>
-                  </li>
+                  
                   <li class="list-inline-item">
                     <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="<?php print base_url('assets/images/recipes/10.jpg');?>">
                       <i class="icon-communication-017 u-line-icon-pro"></i>
@@ -232,11 +204,7 @@
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<?php print base_url('assets/images/recipes/11.jpg');?>" alt="Fruit Salad">
               <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
                 <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
-                  <li class="list-inline-item">
-                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
-                      <i class="icon-communication-095 u-line-icon-pro"></i>
-                    </a>
-                  </li>
+                  
                   <li class="list-inline-item">
                     <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="<?php print base_url('assets/images/recipes/11.jpg');?>">
                       <i class="icon-communication-017 u-line-icon-pro"></i>
@@ -260,11 +228,7 @@
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<?php print base_url('assets/images/recipes/12.jpg');?>" alt="Eggs">
               <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
                 <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
-                  <li class="list-inline-item">
-                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
-                      <i class="icon-communication-095 u-line-icon-pro"></i>
-                    </a>
-                  </li>
+                  
                   <li class="list-inline-item">
                     <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="<?php print base_url('assets/images/recipes/12.jpg');?>">
                       <i class="icon-communication-017 u-line-icon-pro"></i>

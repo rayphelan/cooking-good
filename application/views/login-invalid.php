@@ -25,7 +25,7 @@ include("_header.php");
       <!-- Promo Block Content -->
       <div class="container g-color-white text-center g-pt-100 g-pb-70">
         
-        <h2 class="g-font-weight-700 g-font-size-80 text-uppercase g-color-white">Welcome Back</h2>
+        <h2 class="g-font-weight-700 g-font-size-50 text-uppercase g-color-white">Welcome Back</h2>
       </div>
       <!-- Promo Block Content -->
     </section>

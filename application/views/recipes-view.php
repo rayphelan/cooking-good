@@ -54,7 +54,7 @@ include("_header.php");
 <!-- Product Description -->
       <div class="container g-pt-50 g-pb-40">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-12 g-pb-20">
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- CookingGood-Ad2 -->
             <ins class="adsbygoogle"

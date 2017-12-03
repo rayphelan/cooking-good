@@ -26,7 +26,7 @@
                     <a href="#selected-recipes" class="nav-link p-0">Highlights</a>
                   </li>
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#category-section" class="nav-link p-0">Categories</a>
+                    <a href="<?php print base_url($lg."/categories");?>" class="nav-link p-0">Categories</a>
                   </li>                  
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
                     <a href="<?php print base_url($lg."/recipes");?>" class="nav-link p-0">Recipes</a>
@@ -75,13 +75,15 @@
               <!-- End Navigation -->
 
               <!-- Responsive Toggle Button -->
-              <button class="navbar-toggler btn btn-primary g-pos-abs g-top-15 g-right-0" type="button"
+              <button class="navbar-toggler btn btn-sm u-btn-primary u-btn-skew u-btn-hover-v2-1 g-font-weight-600 g-letter-spacing-0_5 text-uppercase g-brd-2 g-rounded-0 g-pos-abs g-top-15 g-right-0" type="button"
                       aria-label="Toggle navigation"
                       aria-expanded="false"
                       aria-controls="navBar"
                       data-toggle="collapse"
                       data-target="#navBar">
-                MENU
+                <span class="u-btn-skew__inner">
+                  MENU
+                </span>
               </button>
               <!-- End Responsive Toggle Button -->
             </div>
