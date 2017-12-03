@@ -105,7 +105,7 @@ include("_header.php");
                 <div class="col-6 col-lg-4 g-mb-30">                  
                   <!-- Product -->
                   <figure class="g-pos-rel g-mb-20">
-                    <a href="#">
+                    <a href="<?php print $recipe['link'];?>">
                       <img class="img-fluid" src="<?php print $recipe['image'];?>" alt="<?php print $recipe['title'];?>">                    
                     </a>
                   </figure>
@@ -114,7 +114,7 @@ include("_header.php");
                     <!-- Product Info -->
                     <div class="d-flex flex-column">
                       <h4 class="h6 g-color-black mb-1">
-                        <a class="u-link-v5 g-color-black g-color-primary--hover" href="#!">
+                        <a class="u-link-v5 g-color-black g-color-primary--hover" href="<?php print $recipe['link'];?>">
                           <?php print $recipe['title'];?>
                         </a>
                       </h4>

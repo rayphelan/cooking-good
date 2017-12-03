@@ -16,6 +16,15 @@
 }
 
 
+/*  Ray Blur */
+.rayblur {
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+
 
 /* Nav bar drop down */
 .nav-item.dropdown {
@@ -23,9 +32,8 @@
     color: #FFF;
 }
 .dropdown-menu {
-  background-color: #000;
+    background-color: #000;
 }
-
 a.dropdown-item {
 	color: #fff;
 }

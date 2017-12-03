@@ -11,7 +11,7 @@ class Recipes_model extends CI_Model {
 	
 
 	//	Get Recipes
-	public function getRecipes() {
+	public function getRecipes($id = NULL) {
 
 		$r = array(	'1' => 'Seafood Pasta',
 					'2' => 'BBQ Chicken',
@@ -42,13 +42,18 @@ class Recipes_model extends CI_Model {
 		);
 
 		foreach($r as $k=>$v) {
-			$recipes[] = array(	'image'=>base_url('assets/images/recipes/'.$k.'.jpg'), 
-								'title'=>$v,
-								'owner'=>$n[$k]
+			$recipes[] = array(	'image' => 	base_url('assets/images/recipes/'.$k.'.jpg'), 
+								'title' =>	$v,
+								'owner' =>	$n[$k],
+								'link' =>	base_url($this->lang->lang()."/recipes/view/$k.jpg")
 			);
 		}
 
 		#print "<pre>"; print_r($recipes); die();
+
+		if($id > 0) {
+			return $recipes[$id-1];
+		}
 
 		return $recipes;
 	}

@@ -29,6 +29,17 @@ class Recipes extends CI_Controller {
 	}
 
 
+	//	View Recipe
+	public function view($recipe_id) {
+
+		$recipe = $this->recipes_model->getRecipes($recipe_id);
+
+		$data['lg'] = $this->lang->lang();
+		$data['recipe'] = $recipe;
+
+		$this->load->view('recipes-view',$data);
+	}
+
 
 
 }
