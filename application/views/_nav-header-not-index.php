@@ -47,25 +47,25 @@
                   <?php if($_SESSION['CG_user_id']) {?>
                   <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg dropdown">
                   
-                  <div class=" g-mb-0 g-mb-0--md">
-                    <span class="d-block g-color-primary--hover g-cursor-pointer g-mr-minus-5 g-pa-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      My Account
-                    </span>
-                    <div class="dropdown-menu dropdown-menu-right rounded-0 g-mt-10">
-                      <a class="dropdown-item g-px-10" href="<?php print base_url($lg."/");?>">
-                        Upload Recipe
-                      </a>
-                      <a class="dropdown-item g-px-10" href="<?php print base_url($lg."/profile/me");?>">
-                        My Profile
-                      </a>
+                    <div class=" g-mb-0 g-mb-0--md">
+                      <span class="d-block g-color-primary--hover g-cursor-pointer g-mr-minus-5 g-pa-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #e85c18">
+                        My Account
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right rounded-0 g-mt-10">
+                        <a class="dropdown-item g-px-10" href="<?php print base_url($lg."/");?>">
+                          Upload Recipe
+                        </a>
+                        <a class="dropdown-item g-px-10" href="<?php print base_url($lg."/profile/me");?>">
+                          My Profile
+                        </a>
 
-                      <div class="dropdown-divider"></div>
+                        <div class="dropdown-divider"></div>
 
-                      <a class="dropdown-item g-px-10" href="<?php print base_url($lg."/logout");?>">
-                        Logout
-                      </a>
-                    </div>
-                  </div>                                   
+                        <a class="dropdown-item g-px-10" href="<?php print base_url($lg."/logout");?>">
+                          Logout
+                        </a>
+                      </div>
+                    </div>                                   
                                             
                   </li>
                   <?php } ?>  
